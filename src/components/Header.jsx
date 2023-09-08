@@ -1,22 +1,20 @@
-import React from "react";
-import localFont from "next/font/local";
+import React, { useContext } from "react";
 import Image from "next/image";
 import rocket from "../../public/icon/rocket.svg";
 import strip from "../../public/icon/strip.svg";
 import light from "../../public/icon/light.svg";
-const fontPrimary = localFont({
-  src: "../../public/fonts/grifter.otf",
-});
+import { MyContext } from "@/lib/context/AppContext";
 
 export default function Header() {
+  const { fontPrimary } = MyContext();
   return (
-    <div className="max-w-[1120px] mx-auto">
-      <h1 style={fontPrimary.style} className="text-h1 pt-[190px] text-primary">
+    <div className="max-w-[1120px] mx-auto pt-[100px]">
+      <h1 style={fontPrimary.style} className="text-h1  text-primary">
         <span className="relative">
           <Image
             src={strip}
             alt="strip"
-            className="absolute mt-2 -z-10 -ml-4"
+            className="absolute z-[-1] mt-2 -ml-4"
           />
           Passionate{" "}
         </span>

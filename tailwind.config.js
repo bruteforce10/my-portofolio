@@ -10,9 +10,6 @@ module.exports = {
       tablet: "960px",
       desktop: "1240px",
     },
-    colors: {
-      primary: "#204C74",
-    },
     boxShadow: {
       lgWhite: "0px 4px 4px 0px rgba(255, 255, 255, 0.25);",
     },
@@ -28,7 +25,12 @@ module.exports = {
       h4: ["40px"],
       h2: ["56px", { lineHeight: "150%", letterSpacing: "1.2px" }],
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#204C74",
+        text: "#12385C",
+      },
+    },
   },
   plugins: [],
 };
