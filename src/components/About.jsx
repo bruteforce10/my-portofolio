@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import hi from "../../public/icon/hi.svg";
 import Image from "next/image";
 import strip from "../../public/icon/strip.svg";
@@ -7,10 +7,13 @@ import CardSkill from "./card-skills";
 import { mySkills } from "@/lib/data";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
+import AboutArticle from "./about-article";
+import useSectionView from "@/lib/hook";
 
 const About = () => {
   const { fontPrimary } = MyContext();
-  const variantFade = {
+  const { ref } = useSectionView("#why");
+  const variantUp = {
     hidden: {
       opacity: 0,
       y: 100,
@@ -24,12 +27,17 @@ const About = () => {
       },
     },
   };
+
   return (
-    <div className="max-w-[1120px] mx-auto mt-[150px] md:mt-[172px] px-6 pb-[100px]">
+    <div
+      ref={ref}
+      className="max-w-[1120px] mx-auto mt-[150px] md:mt-[172px] px-6 pb-[100px] scroll-mt-28"
+      id="why"
+    >
       <div className="text-center">
         <motion.h4
           initial="hidden"
-          variants={variantFade}
+          variants={variantUp}
           whileInView="visible"
           className="text-[2.5rem] scale-75 md:scale-100 font-semibold text-text"
         >
@@ -43,33 +51,24 @@ const About = () => {
             Why Me
           </span>
         </motion.h4>
-        <h2
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
           style={fontPrimary.style}
           className="md:text-[3.5rem] text-text text-[2rem]"
         >
           Growth Produces Results
-        </h2>
-        <article className="text-left max-w-[70rem] mt-[2rem] md:mt-[3rem]">
-          <p className="md:text-[1.7rem] text-[1.2rem]  text-text leading-relaxed">
-            I am a freelance frontend developer based in Tangerang Selatan,
-            Indonesia. Despite not having an IT background, I have a strong
-            passion and deep interest in web development, particularly in the
-            frontend dev. My journey began when I created an Android application
-            using React Native to calculate building materials for a house. It
-            was during this project that I fell in love with the world of
-            programming.
-          </p>
-          <br />
-          <p className="md:text-[1.7rem] text-[1.2rem]  text-text leading-relaxed">
-            I have gained knowledge through various courses and self-study,
-            diving deeper into web development and exploring coding beyond the
-            courses. I am constantly driven to learn and grow in this field, and
-            I hope to make a positive impact in the industry.
-          </p>
-        </article>
-        <p className="mt-[2rem] md:mt-[3.8rem] md:text-[1.7rem] text-[1.2rem] text-text font-medium">
+        </motion.h2>
+        <AboutArticle />
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          variants={variantUp}
+          className="mt-[2rem] md:mt-[3.8rem] md:text-[1.7rem] text-[1.2rem] text-text font-medium"
+        >
           Here are some of the tools and technologies I use on a daily basis
-        </p>
+        </motion.p>
         <div className="mt-[3rem] md:mt-[5rem] space-y-6">
           <Marquee pauseOnHover={true}>
             {mySkills.slice(0, 10).map((skill, index) => {
@@ -86,6 +85,34 @@ const About = () => {
             })}
           </Marquee>
         </div>
+      </div>
+      <div className="absolute bottom-0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1439"
+          height="16"
+          viewBox="0 0 1439 16"
+          fill="none"
+        >
+          <path
+            d="M0 8C845.2 8 1313.5 8 1442 8"
+            stroke="url(#paint0_linear_77_2)"
+            stroke-width="15"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_77_2"
+              x1="1361.5"
+              y1="8.94218"
+              x2="-204.5"
+              y2="8.94218"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#88EBFB" />
+              <stop offset="1" stop-color="white" stop-opacity="0.2" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </div>
   );

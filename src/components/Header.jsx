@@ -6,9 +6,12 @@ import strip from "../../public/icon/strip.svg";
 import light from "../../public/icon/light.svg";
 import { MyContext } from "@/lib/context/AppContext";
 import SubHeader from "./sub-header";
+import useSectionView from "@/lib/hook";
 
 export default function Header() {
   const { fontPrimary } = MyContext();
+  const { ref } = useSectionView("#home");
+
   const variantHeader = {
     hidden: {
       opacity: 0,
@@ -36,7 +39,10 @@ export default function Header() {
     },
   };
   return (
-    <div className="max-w-[1120px] max-md:px-6 md:pl-6 mx-auto md:pt-[90px] pt-[50px]">
+    <div
+      ref={ref}
+      className="max-w-[1120px] max-md:px-6 md:pl-6 mx-auto md:pt-[90px] pt-[50px]"
+    >
       <motion.h1
         initial="hidden"
         animate="visible"

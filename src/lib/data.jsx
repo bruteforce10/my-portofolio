@@ -20,6 +20,48 @@ import vercel from "../../public/skill-icon/vercel.svg";
 import xampp from "../../public/skill-icon/xampp.svg";
 import nodejs from "../../public/skill-icon/nodejs.svg";
 
+export const navList = [
+  {
+    name: "Why me",
+    href: "#why",
+  },
+  {
+    name: "Projects",
+    href: "#projects",
+  },
+  {
+    name: "Work Experience",
+    href: "#work",
+  },
+  {
+    name: "Blog ✨",
+    href: "#blog",
+  },
+];
+
+export const navListSecond = [
+  {
+    name: "Projects",
+    href: "#projects",
+  },
+  {
+    name: "Work Experience",
+    href: "#work",
+  },
+  {
+    name: "Lisence",
+    href: "#lisence",
+  },
+  {
+    name: "Contact Me",
+    href: "#contact",
+  },
+  {
+    name: "Blog ✨",
+    href: "#blog",
+  },
+];
+
 export const mySkills = [
   {
     name: "HTML",

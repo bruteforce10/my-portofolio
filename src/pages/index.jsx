@@ -3,12 +3,27 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
+import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
+import Projects from "@/components/Projects";
+import WorkExperience from "@/components/WorkExperience";
+import NavbarProject from "@/components/navbar-projects";
 
 const defaultFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <main>
       <section
@@ -17,6 +32,11 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
+      </section>
+      <section>
+        <NavbarProject />
+        <Projects />
+        <WorkExperience />
       </section>
     </main>
   );

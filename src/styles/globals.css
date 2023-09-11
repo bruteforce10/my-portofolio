@@ -13,4 +13,13 @@
     border: 1.5px solid #fff;
     backdrop-filter: blur(2.5px);
   }
+  .bg-gradient-dark {
+    border: 1.5px solid #fff;
+    background: radial-gradient(
+      158.99% 151.91% at 40.83% 44.78%,
+      rgba(255, 255, 255, 0.39) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    backdrop-filter: blur(2.5px);
+  }
 }
