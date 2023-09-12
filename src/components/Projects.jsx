@@ -5,6 +5,7 @@ import light from "../../public/icon/light.svg";
 import { MyContext } from "@/lib/context/AppContext";
 import useSectionView from "@/lib/hook";
 import WorkExperience from "./WorkExperience";
+import CardProjects from "./card-projects";
 
 const Projects = () => {
   const { fontPrimary } = MyContext();
@@ -48,6 +49,7 @@ const Projects = () => {
             I&apos;ve worked on various projects, from small MVPs to full-scale
             applications, creating a wide range of features and functionalities.
           </p>
+          <CardProjects />
         </div>
       </div>
     </div>

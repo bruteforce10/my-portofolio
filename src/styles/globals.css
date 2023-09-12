@@ -22,4 +22,37 @@
     );
     backdrop-filter: blur(2.5px);
   }
+  .bg-gradient-box {
+    border-radius: 1.5rem;
+    border: 1px solid var(--radial, rgba(136, 235, 251, 0.8));
+    background: linear-gradient(116deg, #06141c 0%, #0a1c25 100.98%), #fff;
+  }
+  .bg-card {
+    background: #081821;
+    background: radial-gradient(
+          circle at 100% 100%,
+          #081821 0,
+          #081821 7px,
+          transparent 7px
+        )
+        0% 0%/8px 8px no-repeat,
+      radial-gradient(circle at 0 100%, #081821 0, #081821 7px, transparent 7px)
+        100% 0%/8px 8px no-repeat,
+      radial-gradient(circle at 100% 0, #081821 0, #081821 7px, transparent 7px)
+        0% 100%/8px 8px no-repeat,
+      radial-gradient(circle at 0 0, #081821 0, #081821 7px, transparent 7px)
+        100% 100%/8px 8px no-repeat,
+      linear-gradient(#081821, #081821) 50% 50% / calc(100% - 2px)
+        calc(100% - 16px) no-repeat,
+      linear-gradient(#081821, #081821) 50% 50% / calc(100% - 16px)
+        calc(100% - 2px) no-repeat,
+      linear-gradient(1deg, rgba(136, 235, 251, 0) 0%, #88ebfb 60%);
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(136, 235, 251, 0.8) !important;
 }

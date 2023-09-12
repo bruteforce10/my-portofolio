@@ -97,7 +97,7 @@ const About = () => {
           <path
             d="M0 8C845.2 8 1313.5 8 1442 8"
             stroke="url(#paint0_linear_77_2)"
-            stroke-width="15"
+            strokeWidth="15"
           />
           <defs>
             <linearGradient
@@ -108,8 +108,8 @@ const About = () => {
               y2="8.94218"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#88EBFB" />
-              <stop offset="1" stop-color="white" stop-opacity="0.2" />
+              <stop stopColor="#88EBFB" />
+              <stop offset="1" stopColor="white" stopOpacity="0.2" />
             </linearGradient>
           </defs>
         </svg>
