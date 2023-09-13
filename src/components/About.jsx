@@ -86,7 +86,7 @@ const About = () => {
           </Marquee>
         </div>
       </div>
-      <div className="absolute bottom-0">
+      <div className="absolute bottom-0 z-50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1439"

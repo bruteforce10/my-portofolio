@@ -23,8 +23,6 @@
     backdrop-filter: blur(2.5px);
   }
   .bg-gradient-box {
-    border-radius: 1.5rem;
-    border: 1px solid var(--radial, rgba(136, 235, 251, 0.8));
     background: linear-gradient(116deg, #06141c 0%, #0a1c25 100.98%), #fff;
   }
   .bg-card {

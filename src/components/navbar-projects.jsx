@@ -8,7 +8,7 @@ const NavbarProject = () => {
   const { activeSection } = MyContext();
   return (
     <header className={"sticky top-0  inset-x-0  z-[99] flex justify-center  "}>
-      <ul className="flex items-center justify-center mt-12 gap-[2rem] py-[.8rem] text-white  w-fit px-[2rem] bg-[#0C2B3F]/30 backdrop-blur-sm rounded-full">
+      <ul className="flex items-center  justify-center max-lg:flex-wrap rounded-none md:rounded-full w-full md:w-fit lg:px-[2rem] sm:mt-12 md:gap-[2rem]  py-[.8rem] text-white   bg-[#0C2B3F]/30 backdrop-blur-sm ">
         {navListSecond.map((item, index) => (
           <li key={index} className="relative z-[99] px-4 py-[.5rem] ">
             <Link className="text-[1.2rem]" href={item.href}>

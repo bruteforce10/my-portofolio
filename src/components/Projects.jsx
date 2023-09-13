@@ -26,14 +26,14 @@ const Projects = () => {
   };
   return (
     <div id="projects" ref={ref} className="bg-[#071F2C] -mt-[120px]">
-      <div className="max-w-[1120px]  mx-auto pt-[16rem] space-y-[6rem]  px-6 pb-[100px] scroll-mt-28">
-        <div className="text-center space-y-8">
+      <div className="max-w-[1120px]  mx-auto sm:pt-[16rem] pt-[12rem] space-y-[6rem]  md:px-6 pb-[100px] scroll-mt-28">
+        <div className="text-center space-y-8 ">
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 3 }}
             style={fontPrimary.style}
-            className="md:text-[3.5rem] text-white text-[2rem]"
+            className="md:text-[3.5rem] max-md:text-[2.5rem] text-white max-sm:text-[1.8rem]"
           >
             ⚡Highlighted{" "}
             <span className="relative">
@@ -45,7 +45,7 @@ const Projects = () => {
               />
             </span>
           </motion.h2>
-          <p className="text-white max-w-[42rem] mx-auto font-light text-[1.7rem]">
+          <p className="text-white max-w-[42rem] mx-auto max-md:px-6 font-light text-[1.2rem] md:text-[1.7rem]">
             I&apos;ve worked on various projects, from small MVPs to full-scale
             applications, creating a wide range of features and functionalities.
           </p>
