@@ -29,8 +29,15 @@ import show6 from "../../public/projects/portofolio/2.png";
 import show7 from "../../public/projects/portofolio/3.png";
 import show8 from "../../public/projects/portofolio/4.png";
 import show9 from "../../public/projects/portofolio/5.png";
+import show10 from "../../public/projects/connectic/1.png";
+import show11 from "../../public/projects/connectic/2.png";
+import show12 from "../../public/projects/connectic/3.png";
+import show13 from "../../public/projects/connectic/4.png";
+import show14 from "../../public/projects/connectic/5.png";
+import show15 from "../../public/projects/connectic/6.png";
 import logoSipilku from "../../public/projects/sipilku/logo.png";
 import logoPortofolio from "../../public/projects/portofolio/logo.png";
+import logoConnectic from "../../public/projects/connectic/logo.png";
 
 export const projectsResult = [
   {
@@ -54,6 +61,17 @@ export const projectsResult = [
     link: "firdiaudi.xyz",
     github: "myPortofolio",
     skills: ["HTML", "JavaScript", "SASS", "BootS", "Firebase"],
+  },
+  {
+    logo: logoConnectic,
+    descOne:
+      "Introducing Connectic - Discover thousands of job openings according to your preferences, track applications, and set notifications. Achieving your dream career just got easier!",
+    descSecond:
+      "Connectic was created by designing a Minimum Viable Product (MVP) system by harnessing APIs from the courses I undertook. <br/><br/> It comes equipped with various CRUD, account authentication, as well as filtering and searching capabilities, making it user-friendly. 🚀",
+    image: [show10, show11, show12, show13, show14, show15],
+    link: "connectic.vercel.app",
+    github: "connectic",
+    skills: ["React", "Vercel", "SASS", "TailW", ""],
   },
 ];
 

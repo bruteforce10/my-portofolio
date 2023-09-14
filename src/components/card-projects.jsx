@@ -73,7 +73,7 @@ const CardProjects = ({
           <p dangerouslySetInnerHTML={{ __html: descSecond }}></p>
         </div>
 
-        <div className="bg-card group cursor-pointer relative z-[2] max-w-[30rem]  space-y-[0.2rem]">
+        <div className="bg-card group cursor-pointer relative z-[2] max-w-[32rem]  space-y-[0.2rem]">
           <div className="flex justify-between">
             <div className="flex gap-2 items-center  ">
               <div className="relative w-4 h-4 z-[1]">
