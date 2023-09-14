@@ -20,6 +20,43 @@ import vercel from "../../public/skill-icon/vercel.svg";
 import xampp from "../../public/skill-icon/xampp.svg";
 import nodejs from "../../public/skill-icon/nodejs.svg";
 
+import show1 from "../../public/projects/sipilku/1.png";
+import show2 from "../../public/projects/sipilku/2.png";
+import show3 from "../../public/projects/sipilku/3.png";
+import show4 from "../../public/projects/sipilku/4.png";
+import show5 from "../../public/projects/portofolio/1.png";
+import show6 from "../../public/projects/portofolio/2.png";
+import show7 from "../../public/projects/portofolio/3.png";
+import show8 from "../../public/projects/portofolio/4.png";
+import show9 from "../../public/projects/portofolio/5.png";
+import logoSipilku from "../../public/projects/sipilku/logo.png";
+import logoPortofolio from "../../public/projects/portofolio/logo.png";
+
+export const projectsResult = [
+  {
+    logo: logoSipilku,
+    descOne:
+      "Sipilku Estimate is your go-to online calculator for construction pros! Plan your <b>projects easily and quickly ✨</b><br/><br/>This calculator helps you determine <b>building material requirements and volumes </b> based on user input.",
+    descSecond:
+      "It includes 17 construction calculations aligned with Indonesian National Standards (SNI), ensuring precise results.<br /><br />Plus, you can export data to Excel. Sipilku Estimate makes project planning a breeze! 💪",
+    image: [show1, show2, show3, show4],
+    link: "sipilkuestimate.dev",
+    github: "sipilku",
+    skills: ["HTML", "JavaScript", "CSS", "BootS"],
+  },
+  {
+    logo: logoPortofolio,
+    descOne:
+      "Welcome to my creative portfolio, where design and video editing come together to create stunning visual experiences.<br/><br/>Here, you'll discover a variety of projects encompassing logo design, posters, brochures, and captivating videos.",
+    descSecond:
+      "Explore my works that blend imagination and expertise in the realms of design and video editing  🎨🎥",
+    image: [show5, show6, show7, show8, show9],
+    link: "firdiaudi.xyz",
+    github: "myPortofolio",
+    skills: ["HTML", "JavaScript", "SASS", "BootS", "Firebase"],
+  },
+];
+
 export const navList = [
   {
     name: "Why me",

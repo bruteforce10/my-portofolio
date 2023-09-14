@@ -16,13 +16,13 @@ const About = () => {
   const variantUp = {
     hidden: {
       opacity: 0,
-      y: 100,
+      y: 50,
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 2,
+        duration: 1.5,
         type: "spring",
       },
     },
@@ -39,9 +39,13 @@ const About = () => {
           initial="hidden"
           variants={variantUp}
           whileInView="visible"
-          className="text-[2.5rem] scale-75 md:scale-100 font-semibold text-text"
+          className="md:text-[2.5rem] text-[1.5rem]  font-semibold text-text mx-auto "
         >
-          <Image src={hi} alt="hi" className="inline-block mr-4" />
+          <Image
+            src={hi}
+            alt="hi"
+            className="inline-block scale-75 md:scale-100 mr-1 md:mr-4"
+          />
           <span className="relative ">
             <Image
               src={strip}

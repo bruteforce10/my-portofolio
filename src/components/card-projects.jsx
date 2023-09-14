@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import logoSipilku from "../../public/projects/sipilku/logo.png";
 import border from "../../public/icon/border.png";
 import pattern from "../../public/icon/pattern.png";
 import "swiper/css";
@@ -9,10 +8,24 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { mySkills } from "@/lib/data";
 import SlideProjects from "./slide-projects";
+import useSectionView from "@/lib/hook";
 
-const CardProjects = () => {
+const CardProjects = ({
+  image,
+  logo,
+  descOne,
+  descSecond,
+  link,
+  github,
+  skills,
+}) => {
   return (
-    <div className="w-full bg-gradient-box md:rounded-[24px] px-[1.1rem] md:px-[3.6rem] py-[4.3rem] relative">
+    <motion.div
+      initial={{ opacity: 0, y: -100, scale: 0.5 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="w-full bg-gradient-box md:rounded-[24px] px-[1.1rem] md:px-[3.6rem] py-[4.3rem] relative"
+    >
       <div className="absolute md:hidden top-0 left-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,34 +64,18 @@ const CardProjects = () => {
         <Image src={pattern} alt="pattern-bottom" />
       </div>
       <div className="md:space-y-[3rem] space-y-[1.2rem]">
-        <Image src={logoSipilku} alt="sipilku" />
+        <Image src={logo} alt="sipilku" />
         <div className="text-start text-white text-[1.2rem] md:text-[1.6rem]   font-light">
-          <p>
-            Sipilku Estimate is your go-to online calculator for construction
-            pros! Plan your <b>projects easily and quickly ✨</b>
-          </p>
-          <br />
-          <p>
-            This calculator helps you determine{" "}
-            <b>building material requirements and volumes </b> based on user
-            input.
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: descOne }}></p>
         </div>
-        <SlideProjects />
+        <SlideProjects image={image} />
         <div className="text-start text-white text-[1.1rem] md:text-[1.6rem]  font-light">
-          <p>
-            It includes 17 construction calculations aligned with Indonesian
-            National Standards (SNI), ensuring precise results.
-          </p>
-          <br />
-          <p>
-            Plus, you can export data to Excel. Sipilku Estimate makes project
-            planning a breeze! 💪
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: descSecond }}></p>
         </div>
-        <div id="bgCard" className="bg-card  max-w-[30rem]  space-y-[0.2rem]">
+
+        <div className="bg-card group cursor-pointer relative z-[2] max-w-[30rem]  space-y-[0.2rem]">
           <div className="flex justify-between">
-            <div className="flex gap-2 items-center ">
+            <div className="flex gap-2 items-center  ">
               <div className="relative w-4 h-4 z-[1]">
                 <motion.div
                   animate={{
@@ -101,7 +98,7 @@ const CardProjects = () => {
                 Live in production
               </p>
             </div>
-            <div className="py-[0.4rem] px-[0.5rem] rounded-md shadow-md bg-[#0D2633] ">
+            <div className="py-[0.4rem] px-[0.5rem] group-hover:translate-x-[.4rem] group-hover:-translate-y-[.4rem] transition-all  rounded-md shadow-md bg-[#0D2633] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -117,8 +114,8 @@ const CardProjects = () => {
             </div>
           </div>
 
-          <h4 className="md:text-[3rem] text-start max-sm:text-[2rem] text-[2.5rem] font-semibold text-white leading-none">
-            sipilkuestimate.dev
+          <h4 className="md:text-[3rem]  text-start max-sm:text-[2rem] text-[2.5rem] font-semibold text-white leading-none">
+            {link}
             <span className="ml-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -155,8 +152,8 @@ const CardProjects = () => {
           </h4>
         </div>
 
-        <div className="space-y-[.5rem] text-white text-start cursor-pointer">
-          <h4 className="text-4xl max-sm:text-2xl font-semibold">sipilku </h4>
+        <div className="space-y-[.5rem] text-white text-start cursor-pointer relative z-[2]">
+          <h4 className="text-4xl max-sm:text-2xl font-semibold">{github} </h4>
           <p className="text-white/60 text-[1.2rem] max-sm:text-[.9rem] ">
             on
             <span className="inline-block mx-1">
@@ -191,8 +188,6 @@ const CardProjects = () => {
           </h3>
           <div className="flex gap-x-[2rem] max-sm:gap-x-[1rem] justify-start  mt-[2rem]">
             {mySkills.map((skill, index) => {
-              const skills = ["HTML", "JavaScript", "CSS", "BootS"];
-
               if (skills.includes(skill.name)) {
                 return (
                   <Image
@@ -207,7 +202,7 @@ const CardProjects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
