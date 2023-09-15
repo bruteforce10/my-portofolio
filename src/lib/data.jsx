@@ -38,6 +38,36 @@ import show15 from "../../public/projects/connectic/6.png";
 import logoSipilku from "../../public/projects/sipilku/logo.png";
 import logoPortofolio from "../../public/projects/portofolio/logo.png";
 import logoConnectic from "../../public/projects/connectic/logo.png";
+import logoRemax from "../../public/company/remax.png";
+import logoStarmas from "../../public/company/starmas.png";
+
+export const WorkExperienceResult = [
+  {
+    logo: logoRemax,
+    job: "Graphic Designer & Video Editor",
+    date: "April 2022 – Present",
+    jobList: [
+      "Search, create. revise and propose design and promotion concepts",
+      "Perform task distribution in teams",
+      "Create instagram content design (Reels, Carousel & Story) for pudlish along with creating captions",
+      "Helping the support team to compile and tidy up presentation materials",
+      "Conducting discussions with the team related to the design that is being worked on and looking for solutions if there are problems",
+      "Taking photos of events conducted by the company",
+      "Create video shooting or motion graphics (if needed) for RE/MAX offices",
+    ],
+  },
+  {
+    logo: logoStarmas,
+    job: "Drafter",
+    date: "September 2021 – April 2022",
+    jobList: [
+      "Designing and crafting various types of doors, windows, and sliding doors from planning to hardware implementation, achieving high design standards, and enhancing production efficiency.",
+      "Developing efficient and reliable hardware systems to support the products",
+      "Regularly monitoring on-site conditions in the factory, improving production efficiency, and ensuring the production of high-quality products.",
+      "Successfully contributing to furniture expo events by creating promotional materials such as posters, landing pages, and booth designs, increasing the company's visibility and attracting potential customers",
+    ],
+  },
+];
 
 export const projectsResult = [
   {

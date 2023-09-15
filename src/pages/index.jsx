@@ -25,15 +25,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className={`${defaultFont.className}`}>
       <section
-        className={` ${defaultFont.className} bg-[url('../../public/background.png')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-center`}
+        className={`  bg-[url('../../public/background.svg')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-center`}
       >
         <Navbar />
         <Header />
         <About />
       </section>
-      <section>
+      <section className="!scroll-smooth">
         <NavbarProject />
         <Projects />
         <WorkExperience />

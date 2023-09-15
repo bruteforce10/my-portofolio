@@ -9,10 +9,10 @@ import { projectsResult } from "@/lib/data";
 
 const Projects = () => {
   const { fontPrimary } = MyContext();
-  const { ref } = useSectionView("#projects", 0.6);
+  const { ref } = useSectionView("#projects");
 
   return (
-    <div id="projects" className="bg-[#071F2C] -mt-[120px]">
+    <div id="projects" className="bg-[#071F2C] relative -mt-[120px]">
       <div className="max-w-[1120px]  mx-auto sm:pt-[16rem] pt-[12rem] space-y-[6rem]  md:px-6 pb-[100px] scroll-mt-28">
         <div className="text-center space-y-8 ">
           <motion.h2
@@ -42,12 +42,41 @@ const Projects = () => {
             I&apos;ve worked on various projects, from small MVPs to full-scale
             applications, creating a wide range of features and functionalities.
           </motion.p>
-          <div className="space-y-[3rem]">
+          <div className="md:space-y-[3rem]">
             {projectsResult.map((item, index) => (
               <CardProjects key={index} {...item} />
             ))}
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 -mb-3">
+        <svg
+          className="w-full"
+          xmlns="http://www.w3.org/2000/svg"
+          width="2516"
+          height="16"
+          viewBox="0 0 2516 16"
+          fill="none"
+        >
+          <path
+            d="M0 8C1474.7 8 2291.79 8 2516 8"
+            stroke="url(#paint0_linear_268_122)"
+            stroke-width="15"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_268_122"
+              x1="2375.54"
+              y1="8.94218"
+              x2="-356.811"
+              y2="8.94218"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#88EBFB" />
+              <stop offset="1" stop-color="white" stop-opacity="0.2" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </div>
   );

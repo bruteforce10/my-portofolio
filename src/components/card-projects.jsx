@@ -19,15 +19,18 @@ const CardProjects = ({
   github,
   skills,
 }) => {
+  const { ref } = useSectionView("#projects", 0.1);
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: -100, scale: 0.5 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1 }}
-      className="w-full bg-gradient-box md:rounded-[24px] px-[1.1rem] md:px-[3.6rem] py-[4.3rem] relative"
+      className="w-full bg-gradient-box md:rounded-[24px] px-[1rem] md:px-[3.6rem] py-[4.3rem] relative"
     >
       <div className="absolute md:hidden top-0 left-0">
         <svg
+          className="w-full"
           xmlns="http://www.w3.org/2000/svg"
           width="907"
           height="4"
@@ -60,7 +63,7 @@ const CardProjects = ({
       <div className="absolute bottom-0 opacity-75 max-md:hidden ">
         <Image src={border} alt="border-bottom" />
       </div>
-      <div className="absolute bottom-0 right-0 opacity-75 ">
+      <div className="absolute bottom-0 right-0 opacity-75  ">
         <Image src={pattern} alt="pattern-bottom" />
       </div>
       <div className="md:space-y-[3rem] space-y-[1.2rem]">
@@ -73,7 +76,7 @@ const CardProjects = ({
           <p dangerouslySetInnerHTML={{ __html: descSecond }}></p>
         </div>
 
-        <div className="bg-card group cursor-pointer relative z-[2] max-w-[32rem]  space-y-[0.2rem]">
+        <div className="bg-card group cursor-pointer relative z-[2] w-fit  space-y-[0.2rem]">
           <div className="flex justify-between">
             <div className="flex gap-2 items-center  ">
               <div className="relative w-4 h-4 z-[1]">
@@ -98,7 +101,7 @@ const CardProjects = ({
                 Live in production
               </p>
             </div>
-            <div className="py-[0.4rem] px-[0.5rem] group-hover:translate-x-[.4rem] group-hover:-translate-y-[.4rem] transition-all  rounded-md shadow-md bg-[#0D2633] ">
+            <div className="py-[0.4rem] max-sm:scale-[.8] px-[0.5rem] group-hover:translate-x-[.4rem] group-hover:-translate-y-[.4rem] transition-all  rounded-md shadow-md bg-[#0D2633] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -114,7 +117,7 @@ const CardProjects = ({
             </div>
           </div>
 
-          <h4 className="md:text-[3rem]  text-start max-sm:text-[2rem] text-[2.5rem] font-semibold text-white leading-none">
+          <h4 className="md:text-[3rem]  sm:pr-[4rem]  text-start max-sm:text-[1.8rem] text-[2.5rem] font-semibold text-white leading-none">
             {link}
             <span className="ml-5">
               <svg
