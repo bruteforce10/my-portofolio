@@ -4,13 +4,14 @@ import { MyContext } from "./context/AppContext";
 
 function useSectionView(section, threshold = 0.5) {
   const { ref, inView } = useInView({ threshold: threshold });
-  const { setActiveSection } = MyContext();
+
+  const { setActiveSection, timeOfLastClick } = MyContext();
 
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(section);
     }
-  }, [inView, ref, setActiveSection, section]);
+  }, [inView, setActiveSection, timeOfLastClick, section]);
 
   return {
     ref,

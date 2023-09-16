@@ -5,7 +5,7 @@ import { MyContext } from "@/lib/context/AppContext";
 import { motion } from "framer-motion";
 
 const NavbarProject = () => {
-  const { activeSection } = MyContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = MyContext();
   return (
     <header className={"sticky top-0  inset-x-0  z-[99] flex justify-center  "}>
       <ul
@@ -18,7 +18,14 @@ const NavbarProject = () => {
       >
         {navListSecond.map((item, index) => (
           <li key={index} className="relative z-[99] px-4 py-[.5rem] ">
-            <Link className="text-[1.1rem]" href={item.href}>
+            <Link
+              className="text-[1.1rem]"
+              onClick={() => {
+                setActiveSection(item.href);
+                setTimeOfLastClick(Date.now());
+              }}
+              href={item.href}
+            >
               {item.name}
             </Link>
             {activeSection === item.href && (

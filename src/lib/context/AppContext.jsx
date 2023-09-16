@@ -9,9 +9,16 @@ const fontPrimary = localFont({
 });
 const AppContextProvider = (props) => {
   const [activeSection, setActiveSection] = useState(null);
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
   return (
     <AppContext.Provider
-      value={{ fontPrimary, activeSection, setActiveSection }}
+      value={{
+        fontPrimary,
+        activeSection,
+        setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick,
+      }}
     >
       {props.children}
     </AppContext.Provider>
