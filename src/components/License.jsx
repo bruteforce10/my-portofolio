@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import light from "../../public/icon/light.svg";
 import { MyContext } from "@/lib/context/AppContext";
@@ -12,7 +12,27 @@ function MySertificate() {
   const { fontPrimary } = MyContext();
   const [isShow, setShow] = useState(false);
   const [lisenceName, setLisenceName] = useState("");
+  const [isDropdown, setDropdown] = useState(6);
   const { ref } = useSectionView("#lisence", 0.2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 590) {
+        setDropdown(3);
+      } else if (window.innerWidth <= 1000) {
+        setDropdown(4);
+      } else {
+        setDropdown(6);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       {isShow &&
@@ -51,7 +71,7 @@ function MySertificate() {
           }
         })}
 
-      <div className=" bg-gradient-to-r relative  from-[#07151C] to-[#040D11]">
+      <div className=" bg-gradient-to-r relative overflow-y-hidden  from-[#07151C] to-[#040D11]">
         <Image
           src={pattern}
           alt="pattern"
@@ -90,9 +110,15 @@ function MySertificate() {
             </motion.p>
             <div ref={ref} className="flex justify-center flex-wrap gap-7 ">
               {LisenceResult.map((item, index) => {
-                if (index < 3) {
+                if (index < isDropdown) {
                   return (
-                    <div className="group relative  cursor-pointer" key={index}>
+                    <motion.div
+                      initial={{ opacity: 0, y: -50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      className="group relative  cursor-pointer"
+                      key={index}
+                    >
                       <div className="w-[310px] inset-0 scale-y-75 left-1/2 -translate-x-1/2 absolute top-0 rotate-[-3deg]  rounded-xl bg-gradient-lisence "></div>
                       <motion.div
                         initial={{ opacity: 0 }}
@@ -146,12 +172,44 @@ function MySertificate() {
                         alt={item.name}
                         className=" max-w-[300px] relative rounded-xl "
                       />
-                    </div>
+                    </motion.div>
                   );
                 }
               })}
             </div>
           </div>
+          {isDropdown === 20 && (
+            <div
+              onClick={() => {
+                if (window.innerWidth <= 590) {
+                  setDropdown(3);
+                } else if (window.innerWidth <= 1000) {
+                  setDropdown(4);
+                } else {
+                  setDropdown(6);
+                }
+              }}
+              className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
+            >
+              <span className="inline-block group-hover:-translate-y-1 transition-all">
+                👆
+              </span>{" "}
+              {""}
+              Hidden
+            </div>
+          )}
+          {isDropdown <= 6 && (
+            <div
+              onClick={() => setDropdown(20)}
+              className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
+            >
+              <span className="inline-block group-hover:translate-y-1 transition-all">
+                👇
+              </span>{" "}
+              {""}
+              Show All
+            </div>
+          )}
         </div>
       </div>
     </>

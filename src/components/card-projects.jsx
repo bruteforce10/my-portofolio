@@ -67,7 +67,7 @@ const CardProjects = ({
         <Image src={pattern} alt="pattern-bottom" />
       </div>
       <div className="md:space-y-[3rem] space-y-[1.2rem]">
-        <Image src={logo} alt="sipilku" />
+        <Image src={logo} alt="sipilku" className="w-[12rem]" />
         <div className="text-start text-white text-[1.2rem] md:text-[1.6rem]   font-light">
           <p dangerouslySetInnerHTML={{ __html: descOne }}></p>
         </div>

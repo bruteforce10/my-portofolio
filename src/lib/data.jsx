@@ -52,16 +52,10 @@ import lisence9 from "../../public/certi/ui-design-app.png";
 
 export const LisenceResult = [
   {
-    img: lisence1,
-    name: "Class Framework Boostrap with CodePolitan",
-    date: "Juli 2022",
-    link: "https://www.codepolitan.com/c/DBPY2IF",
-  },
-  {
-    img: lisence2,
-    name: "Class Javascript DOM with CodePolitan",
-    date: "Januari 2022",
-    link: "https://www.codepolitan.com/c/SR3FNKT",
+    img: lisence4,
+    name: "Front-End Basic with Dicoding",
+    date: "Maret 2023",
+    link: "https://dicoding.com/certificates/QLZ92WL39X5D",
   },
   {
     img: lisence3,
@@ -70,11 +64,30 @@ export const LisenceResult = [
     link: "",
   },
   {
-    img: lisence4,
-    name: "Front-End Basic with Dicoding",
-    date: "Maret 2023",
-    link: "https://dicoding.com/certificates/QLZ92WL39X5D",
+    img: lisence7,
+    name: "Bootcamp React JS with PKS Digital School",
+    date: "June 2023",
+    link: "https://member.pksdigitalschool.id/sertifikat/generate/552d5aff-c353-4e31-88e0-38a22e801245",
   },
+  {
+    img: lisence2,
+    name: "Class Javascript DOM with CodePolitan",
+    date: "Januari 2022",
+    link: "https://www.codepolitan.com/c/SR3FNKT",
+  },
+  {
+    img: lisence9,
+    name: "Class UI Design Mobile App with Rubrik Grafis",
+    date: "April 2021",
+    link: "",
+  },
+  {
+    img: lisence1,
+    name: "Class Framework Boostrap with CodePolitan",
+    date: "Juli 2022",
+    link: "https://www.codepolitan.com/c/DBPY2IF",
+  },
+
   {
     img: lisence5,
     name: "Class GIT with CodePolitan",
@@ -87,22 +100,11 @@ export const LisenceResult = [
     date: "Januari 2022",
     link: "https://www.codepolitan.com/c/XNZHBG3",
   },
-  {
-    img: lisence7,
-    name: "Bootcamp React JS with PKS Digital School",
-    date: "June 2023",
-    link: "https://member.pksdigitalschool.id/sertifikat/generate/552d5aff-c353-4e31-88e0-38a22e801245",
-  },
+
   {
     img: lisence8,
     name: "Class Wordpress with KELASWORDPRESS.MY.ID",
     date: "Agustus 2021",
-    link: "",
-  },
-  {
-    img: lisence9,
-    name: "Class UI Design Mobile App with Rubrik Grafis",
-    date: "April 2021",
     link: "",
   },
 ];
