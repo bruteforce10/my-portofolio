@@ -40,6 +40,72 @@ import logoPortofolio from "../../public/projects/portofolio/logo.png";
 import logoConnectic from "../../public/projects/connectic/logo.png";
 import logoRemax from "../../public/company/remax.png";
 import logoStarmas from "../../public/company/starmas.png";
+import lisence1 from "../../public/certi/bootstrap.png";
+import lisence2 from "../../public/certi/dom.png";
+import lisence3 from "../../public/certi/front-end-bootcamp.png";
+import lisence4 from "../../public/certi/front-end-pemula.png";
+import lisence5 from "../../public/certi/git.png";
+import lisence6 from "../../public/certi/jquery.png";
+import lisence7 from "../../public/certi/react-js-bootcamp.png";
+import lisence8 from "../../public/certi/Sertifikat Wordpress.png";
+import lisence9 from "../../public/certi/ui-design-app.png";
+
+export const LisenceResult = [
+  {
+    img: lisence1,
+    name: "Class Framework Boostrap with CodePolitan",
+    date: "Juli 2022",
+    link: "https://www.codepolitan.com/c/DBPY2IF",
+  },
+  {
+    img: lisence2,
+    name: "Class Javascript DOM with CodePolitan",
+    date: "Januari 2022",
+    link: "https://www.codepolitan.com/c/SR3FNKT",
+  },
+  {
+    img: lisence3,
+    name: "Lukananakit 6.0 Frontend Fundamentals Bootcamp",
+    date: "December 2022",
+    link: "",
+  },
+  {
+    img: lisence4,
+    name: "Front-End Basic with Dicoding",
+    date: "Maret 2023",
+    link: "https://dicoding.com/certificates/QLZ92WL39X5D",
+  },
+  {
+    img: lisence5,
+    name: "Class GIT with CodePolitan",
+    date: "Januari 2022",
+    link: "https://www.codepolitan.com/c/OUEWH56",
+  },
+  {
+    img: lisence6,
+    name: "Class JQuery with CodePolitan",
+    date: "Januari 2022",
+    link: "https://www.codepolitan.com/c/XNZHBG3",
+  },
+  {
+    img: lisence7,
+    name: "Bootcamp React JS with PKS Digital School",
+    date: "June 2023",
+    link: "https://member.pksdigitalschool.id/sertifikat/generate/552d5aff-c353-4e31-88e0-38a22e801245",
+  },
+  {
+    img: lisence8,
+    name: "Class Wordpress with KELASWORDPRESS.MY.ID",
+    date: "Agustus 2021",
+    link: "",
+  },
+  {
+    img: lisence9,
+    name: "Class UI Design Mobile App with Rubrik Grafis",
+    date: "April 2021",
+    link: "",
+  },
+];
 
 export const WorkExperienceResult = [
   {

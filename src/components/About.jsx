@@ -90,31 +90,31 @@ const About = () => {
           </Marquee>
         </div>
       </div>
-      <div className="absolute bottom-0 z-50">
+      <div className="absolute bottom-0 -mb-2 right-0 z-50">
         <svg
           className="w-full"
           xmlns="http://www.w3.org/2000/svg"
-          width="1439"
+          width="2516"
           height="16"
-          viewBox="0 0 1439 16"
+          viewBox="0 0 2516 16"
           fill="none"
         >
           <path
-            d="M0 8C845.2 8 1313.5 8 1442 8"
-            stroke="url(#paint0_linear_77_2)"
-            strokeWidth="15"
+            d="M0 8C1474.7 8 2291.79 8 2516 8"
+            stroke="url(#paint0_linear_268_122)"
+            stroke-width="15"
           />
           <defs>
             <linearGradient
-              id="paint0_linear_77_2"
-              x1="1361.5"
+              id="paint0_linear_268_122"
+              x1="2375.54"
               y1="8.94218"
-              x2="-204.5"
+              x2="-356.811"
               y2="8.94218"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#88EBFB" />
-              <stop offset="1" stopColor="white" stopOpacity="0.2" />
+              <stop stop-color="#88EBFB" />
+              <stop offset="1" stop-color="white" stop-opacity="0.2" />
             </linearGradient>
           </defs>
         </svg>
