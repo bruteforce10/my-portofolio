@@ -15,19 +15,19 @@ function MySertificate() {
   const [isDropdown, setDropdown] = useState(6);
   const { ref } = useSectionView("#lisence", 0.2);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth <= 590) {
-  //       setDropdown(3);
-  //     } else if (window.innerWidth <= 1000) {
-  //       setDropdown(4);
-  //     } else {
-  //       setDropdown(6);
-  //     }
-  //   };
+  const handleResize = () => {
+    if (window.innerWidth <= 590) {
+      setDropdown(3);
+    } else if (window.innerWidth <= 1000) {
+      setDropdown(4);
+    } else {
+      setDropdown(6);
+    }
+  };
 
-  //   window.addEventListener("resize", handleResize);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, [isDropdown, setDropdown]);
 
   return (
     <>
