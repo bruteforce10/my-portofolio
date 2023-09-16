@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
 import NavbarProject from "@/components/navbar-projects";
+import MySertificate from "@/components/License";
 
 const defaultFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function Home() {
         <NavbarProject />
         <Projects />
         <WorkExperience />
+        <MySertificate />
       </section>
     </main>
   );

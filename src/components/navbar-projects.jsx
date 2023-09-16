@@ -10,15 +10,21 @@ const NavbarProject = () => {
     <header className={"sticky top-0  inset-x-0  z-[99] flex justify-center  "}>
       <ul
         className={clsx(
-          "flex items-center  justify-center max-lg:flex-wrap rounded-none md:rounded-full w-full md:w-fit md:px-[2rem] sm:mt-12 lg:gap-[2rem]  py-[.8rem] text-white    backdrop-blur-sm",
+          "flex items-center  justify-center max-lg:flex-wrap rounded-none md:rounded-full w-full md:w-fit md:px-[2rem] sm:mt-12 lg:gap-[2rem]  py-[.8rem]   backdrop-blur-sm",
           activeSection === "#work"
             ? "bg-[#97F0FB]/[.2] text-[#2E6F84]"
-            : "bg-[#0C2B3F]/40"
+            : "bg-[#0C2B3F]/40 text-white"
         )}
       >
         {navListSecond.map((item, index) => (
           <li key={index} className="relative z-[99] px-4 py-[.5rem] ">
-            <Link className="text-[1.1rem]" href={item.href}>
+            <Link
+              className={clsx(
+                "text-[1.1rem]",
+                activeSection === item.href ? "font-[600]" : "font-normal"
+              )}
+              href={item.href}
+            >
               {item.name}
             </Link>
             {activeSection === item.href && (

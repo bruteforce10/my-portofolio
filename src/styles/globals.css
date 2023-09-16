@@ -22,6 +22,15 @@
     );
     backdrop-filter: blur(2.5px);
   }
+  .bg-gradient-lisence {
+    background: radial-gradient(
+      124.13% 115.99% at 45.38% 46.37%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    backdrop-filter: blur(2.5px);
+  }
+
   .bg-gradient-box {
     background: linear-gradient(116deg, #06141c 0%, #0a1c25 100.98%), #fff;
   }
@@ -57,6 +66,13 @@
       rgba(255, 255, 255, 0.6) 100%
     );
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+  }
+  .bg-hover {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) -5.47%,
+      #fff 42.29%
+    );
   }
 }
 

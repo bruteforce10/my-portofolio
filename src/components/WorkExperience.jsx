@@ -11,7 +11,7 @@ function WorkExperience() {
   const { fontPrimary } = MyContext();
   const { ref } = useSectionView("#work", 0.2);
   return (
-    <div className="bg-[url('../../public/bg-work.svg')]">
+    <div className="bg-[url('../../public/bg-work.svg')] relative">
       <div
         id="work"
         className="max-w-[1120px] mx-auto pt-[11rem] md:px-6 pb-[100px] space-y-[5rem] scroll-mt-[1rem]"
@@ -44,11 +44,40 @@ function WorkExperience() {
             skills in editing and graphic design that complement my abilities.
           </motion.p>
         </div>
-        <div className="sm:space-y-4" ref={ref}>
+        <div className="sm:space-y-6" ref={ref}>
           {WorkExperienceResult.map((item, index) => (
             <CardWork key={index} {...item} />
           ))}
         </div>
+      </div>
+      <div className="absolute bottom-0 -mb-2">
+        <svg
+          className="w-full"
+          xmlns="http://www.w3.org/2000/svg"
+          width="2516"
+          height="16"
+          viewBox="0 0 2516 16"
+          fill="none"
+        >
+          <path
+            d="M0 8C1474.7 8 2291.79 8 2516 8"
+            stroke="url(#paint0_linear_268_122)"
+            stroke-width="15"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_268_122"
+              x1="2375.54"
+              y1="8.94218"
+              x2="-356.811"
+              y2="8.94218"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#88EBFB" />
+              <stop offset="1" stop-color="white" stop-opacity="0.2" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </div>
   );
