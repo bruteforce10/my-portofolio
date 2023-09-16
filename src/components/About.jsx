@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div
       ref={ref}
-      className="max-w-[1120px] mx-auto mt-[150px] md:mt-[172px] px-6 pb-[100px] scroll-mt-28"
+      className="max-w-[1120px] mx-auto mt-[150px] md:mt-[172px] px-6 pb-[100px] max-sm:pb-[80px] scroll-mt-28"
       id="why"
     >
       <div className="text-center">
@@ -73,7 +73,7 @@ const About = () => {
         >
           Here are some of the tools and technologies I use on a daily basis
         </motion.p>
-        <div className="mt-[3rem] md:mt-[5rem] space-y-6">
+        <div className="mt-[3rem] md:mt-[5rem] space-y-6 max-sm:space-y-0">
           <Marquee pauseOnHover={true}>
             {mySkills.slice(0, 10).map((skill, index) => {
               return (
