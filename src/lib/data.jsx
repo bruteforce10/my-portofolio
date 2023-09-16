@@ -40,15 +40,15 @@ import logoPortofolio from "../../public/projects/portofolio/logo.png";
 import logoConnectic from "../../public/projects/connectic/logo.png";
 import logoRemax from "../../public/company/remax.png";
 import logoStarmas from "../../public/company/starmas.png";
-import lisence1 from "../../public/certificate/bootstrap.png";
-import lisence2 from "../../public/certificate/dom.png";
-import lisence3 from "../../public/certificate/front-end-bootcamp.png";
-import lisence4 from "../../public/certificate/front-end-pemula.png";
-import lisence5 from "../../public/certificate/git.png";
-import lisence6 from "../../public/certificate/jquery.png";
-import lisence7 from "../../public/certificate/react-js-bootcamp.png";
-import lisence8 from "../../public/certificate/Sertifikat Wordpress.png";
-import lisence9 from "../../public/certificate/ui-design-app.png";
+import lisence1 from "../../public/certi/bootstrap.png";
+import lisence2 from "../../public/certi/dom.png";
+import lisence3 from "../../public/certi/front-end-bootcamp.png";
+import lisence4 from "../../public/certi/front-end-pemula.png";
+import lisence5 from "../../public/certi/git.png";
+import lisence6 from "../../public/certi/jquery.png";
+import lisence7 from "../../public/certi/react-js-bootcamp.png";
+import lisence8 from "../../public/certi/Sertifikat Wordpress.png";
+import lisence9 from "../../public/certi/ui-design-app.png";
 
 export const LisenceResult = [
   {
