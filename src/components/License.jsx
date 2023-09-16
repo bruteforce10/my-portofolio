@@ -15,19 +15,19 @@ function MySertificate() {
   const [isDropdown, setDropdown] = useState(6);
   const { ref } = useSectionView("#lisence", 0.2);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 590) {
-        setDropdown(3);
-      } else if (window.innerWidth <= 1000) {
-        setDropdown(4);
-      } else {
-        setDropdown(6);
-      }
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth <= 590) {
+  //       setDropdown(3);
+  //     } else if (window.innerWidth <= 1000) {
+  //       setDropdown(4);
+  //     } else {
+  //       setDropdown(6);
+  //     }
+  //   };
 
-    window.addEventListener("resize", handleResize);
-  }, []);
+  //   window.addEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <>
@@ -116,10 +116,10 @@ function MySertificate() {
                       key={index}
                     >
                       <div className="w-[310px] inset-0 scale-y-75 left-1/2 -translate-x-1/2 absolute top-0 rotate-[-3deg]  rounded-xl bg-gradient-lisence "></div>
-                      <div
-                        // initial={{ opacity: 0 }}
-                        // whileHover={{ opacity: 1 }}
-                        // transition={{ duration: 0.2 }}
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.2 }}
                         className="bg-hover group-hover:z-50 transition-all  z-[-1] absolute  pl-6 w-full h-full rounded-xl"
                       >
                         <div className="w-full h-full flex-col justify-end pb-6 flex gap-y-4  px-4">
@@ -162,7 +162,7 @@ function MySertificate() {
                             </span>
                           </motion.div>
                         </div>
-                      </div>
+                      </motion.div>
                       <Image
                         src={item.img}
                         alt={item.name}
