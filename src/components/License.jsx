@@ -27,10 +27,6 @@ function MySertificate() {
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   return (
@@ -120,10 +116,10 @@ function MySertificate() {
                       key={index}
                     >
                       <div className="w-[310px] inset-0 scale-y-75 left-1/2 -translate-x-1/2 absolute top-0 rotate-[-3deg]  rounded-xl bg-gradient-lisence "></div>
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.2 }}
+                      <div
+                        // initial={{ opacity: 0 }}
+                        // whileHover={{ opacity: 1 }}
+                        // transition={{ duration: 0.2 }}
                         className="bg-hover group-hover:z-50 transition-all  z-[-1] absolute  pl-6 w-full h-full rounded-xl"
                       >
                         <div className="w-full h-full flex-col justify-end pb-6 flex gap-y-4  px-4">
@@ -166,7 +162,7 @@ function MySertificate() {
                             </span>
                           </motion.div>
                         </div>
-                      </motion.div>
+                      </div>
                       <Image
                         src={item.img}
                         alt={item.name}
