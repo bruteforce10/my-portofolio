@@ -49,6 +49,13 @@ import lisence6 from "../../public/certi/jquery.png";
 import lisence7 from "../../public/certi/react-js-bootcamp.png";
 import lisence8 from "../../public/certi/Sertifikat Wordpress.png";
 import lisence9 from "../../public/certi/ui-design-app.png";
+import otherProjects1 from "../../public/projects/othersProjects/1.png";
+import otherProjects2 from "../../public/projects/othersProjects/2.png";
+import otherProjects3 from "../../public/projects/othersProjects/3.png";
+import otherProjects4 from "../../public/projects/othersProjects/4.png";
+import otherProjects5 from "../../public/projects/othersProjects/5.png";
+import otherProjects6 from "../../public/projects/othersProjects/6.png";
+import otherProjects7 from "../../public/projects/othersProjects/7.png";
 
 export const LisenceResult = [
   {

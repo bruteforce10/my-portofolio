@@ -55,7 +55,6 @@
         calc(100% - 2px) no-repeat,
       linear-gradient(1deg, rgba(136, 235, 251, 0) 0%, #88ebfb 60%);
     border-radius: 8px;
-    padding: 1rem;
     box-sizing: border-box;
   }
   .inner-bg {
@@ -73,6 +72,15 @@
       rgba(255, 255, 255, 0) -5.47%,
       #fff 42.29%
     );
+  }
+  .bg-small {
+    border: 0.12px solid #fff;
+    background: linear-gradient(
+      95deg,
+      rgba(255, 255, 255, 0.45) -24.68%,
+      rgba(255, 255, 255, 0.36) 122.91%
+    );
+    backdrop-filter: blur(6.9984002113342285px);
   }
 }
 

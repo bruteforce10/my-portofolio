@@ -34,7 +34,7 @@ export default function Home() {
         <Header />
         <About />
       </section>
-      <section className="!scroll-smooth">
+      <section>
         <NavbarProject />
         <Projects />
         <WorkExperience />

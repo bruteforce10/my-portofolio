@@ -6,14 +6,17 @@ import { MyContext } from "@/lib/context/AppContext";
 import CardProjects from "./card-projects";
 import useSectionView from "@/lib/hook";
 import { projectsResult } from "@/lib/data";
+import { useRouter } from "next/router";
 
 const Projects = () => {
+  const { ref } = useSectionView("#projects", 0.1);
+  const router = useRouter();
+
   const { fontPrimary } = MyContext();
-  const { ref } = useSectionView("#projects");
 
   return (
-    <div id="projects" className="bg-[#071F2C] relative -mt-[120px]">
-      <div className="max-w-[1120px]  mx-auto sm:pt-[16rem] pt-[12rem] space-y-[6rem]  md:px-6 pb-[100px] scroll-mt-28">
+    <div id="projects" className="bg-[#071F2C] relative -mt-[120px] ">
+      <div className="max-w-[1120px]  mx-auto sm:pt-[16rem] pt-[12rem] space-y-[6rem]  md:px-6 pb-[80px] scroll-mt-28">
         <div className="text-center space-y-8 ">
           <motion.h2
             ref={ref}
@@ -44,11 +47,24 @@ const Projects = () => {
           </motion.p>
           <div className="md:space-y-[3rem]">
             {projectsResult.map((item, index) => (
-              <CardProjects key={index} {...item} />
+              <div key={index}>
+                <CardProjects {...item} />
+              </div>
             ))}
+          </div>
+          <div
+            onClick={() => router.push("/other-projects")}
+            className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
+          >
+            <span className="inline-block mr-2 group-hover:translate-x-1 transition-all">
+              👉
+            </span>{" "}
+            {""}
+            Other Projects
           </div>
         </div>
       </div>
+
       <div className="absolute bottom-0 -mb-2">
         <svg
           className="w-full"

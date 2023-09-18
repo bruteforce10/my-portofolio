@@ -1,11 +1,11 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import border from "../../public/icon/border.png";
 import pattern from "../../public/icon/pattern.png";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { mySkills } from "@/lib/data";
 import SlideProjects from "./slide-projects";
 import useSectionView from "@/lib/hook";
@@ -19,13 +19,17 @@ const CardProjects = ({
   github,
   skills,
 }) => {
-  const { ref } = useSectionView("#projects", 0.1);
+  const refCard = useRef(null);
+  const { ref } = useSectionView("#projects");
+  const isInView = useInView(refCard, { once: true });
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: -100, scale: 0.5 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 1 }}
+      style={{
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? "none" : "translateY(100px)",
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+      ref={refCard}
       className="w-full bg-gradient-box md:rounded-[24px] px-[1rem] md:px-[3.6rem] py-[4.3rem] relative"
     >
       <div className="absolute md:hidden top-0 left-0">
@@ -185,7 +189,7 @@ const CardProjects = ({
           </p>
         </div>
 
-        <div>
+        <div ref={ref}>
           <h3 className="text-white text-4xl max-sm:text-2xl font-medium text-start">
             Featured technologies used
           </h3>

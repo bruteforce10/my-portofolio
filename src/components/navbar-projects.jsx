@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const NavbarProject = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } = MyContext();
   return (
-    <header className={"sticky top-0  inset-x-0  z-[99] flex justify-center  "}>
+    <header className={"sticky top-0  inset-x-0  z-[99] flex justify-center "}>
       <ul
         className={clsx(
           "flex items-center  justify-center max-lg:flex-wrap rounded-none md:rounded-full w-full md:w-fit md:px-[2rem] sm:mt-12 lg:gap-[2rem]  py-[.8rem]   backdrop-blur-sm",

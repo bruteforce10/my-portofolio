@@ -15,20 +15,6 @@ function MySertificate() {
   const [isDropdown, setDropdown] = useState(6);
   const { ref } = useSectionView("#lisence", 0.2);
 
-  const handleResize = () => {
-    if (window.innerWidth <= 590) {
-      setDropdown(3);
-    } else if (window.innerWidth <= 1000) {
-      setDropdown(4);
-    } else {
-      setDropdown(6);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  }, [isDropdown, setDropdown]);
-
   return (
     <>
       {isShow &&
@@ -110,7 +96,7 @@ function MySertificate() {
                   return (
                     <motion.div
                       initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       className="group relative  cursor-pointer"
                       key={index}
@@ -177,13 +163,7 @@ function MySertificate() {
           {isDropdown === 20 && (
             <div
               onClick={() => {
-                if (window.innerWidth <= 590) {
-                  setDropdown(3);
-                } else if (window.innerWidth <= 1000) {
-                  setDropdown(4);
-                } else {
-                  setDropdown(6);
-                }
+                setDropdown(6);
               }}
               className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
             >
