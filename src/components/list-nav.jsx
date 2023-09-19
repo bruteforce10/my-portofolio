@@ -29,7 +29,7 @@ const ListNav = () => {
         </li>
       ))}
       <li className=" group cursor-pointer">
-        <Link href={"#"} className="flex gap-2 items-center ">
+        <Link href={"#contact"} className="flex gap-2 items-center ">
           <span className="text-[1.1rem] font-semibold text-[#1A64A9]">
             Work with me
           </span>

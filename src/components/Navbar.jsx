@@ -78,7 +78,7 @@ function Navbar() {
             <div className=" md:text-[1.4rem] text-[1.2rem] ">
               <span
                 style={fontPrimary.style}
-                className="bg-gradient-to-b from-cyan-500 to-blue-500 text-transparent bg-clip-text"
+                className="bg-gradient-to-b from-[#478DAC] to-[#80BACE] text-transparent bg-clip-text"
               >
                 Firdi Audi Putra
               </span>

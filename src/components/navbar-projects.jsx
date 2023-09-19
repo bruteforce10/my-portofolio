@@ -11,7 +11,7 @@ const NavbarProject = () => {
       <ul
         className={clsx(
           "flex items-center  justify-center max-lg:flex-wrap rounded-none md:rounded-full w-full md:w-fit md:px-[2rem] sm:mt-12 lg:gap-[2rem]  py-[.8rem]   backdrop-blur-sm",
-          activeSection === "#work"
+          activeSection === "#work" || activeSection === "#contact"
             ? "bg-[#97F0FB]/[.2] text-[#2E6F84]"
             : "bg-[#0C2B3F]/40 text-white"
         )}
@@ -31,7 +31,7 @@ const NavbarProject = () => {
                 }}
                 className={clsx(
                   "absolute inset-0 bg-[#304B5C]/40 -z-[1] rounded-full",
-                  activeSection === "#work"
+                  activeSection === "#work" || activeSection === "#contact"
                     ? "bg-[#97F0FB]/60"
                     : " bg-[#304B5C]/40 "
                 )}
