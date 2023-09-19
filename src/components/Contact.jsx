@@ -11,7 +11,7 @@ function Contact() {
   const { fontPrimary } = MyContext();
   const { ref } = useSectionView("#contact", 1);
   return (
-    <div className="bg-[url('../../public/bg-work.svg')] relative">
+    <div className="bg-[url('../../public/bg-work.svg')] overflow-hidden">
       <div
         id="contact"
         className="max-w-[1120px] mx-auto pt-[11rem] px-8 md:px-6 pb-[100px] space-y-[4rem] scroll-mt-[1rem]"

@@ -22,13 +22,13 @@ function Blog() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 3 }}
             style={fontPrimary.style}
-            className="md:text-[3.5rem] max-md:text-[2.5rem] max-md:px-8 text-white max-sm:text-[1.8rem]"
+            className="md:text-[3.5rem] max-md:text-[2.4rem] max-md:px-8 text-white max-sm:text-[1.8rem]"
           >
             ✍️
             <span className="relative">
               <span className="z-50 relative">My Latest Writings</span>
               <svg
-                className="absolute inset-x-0 bottom-0 max-sm:-bottom-1 max-md:w-[310px]"
+                className="absolute inset-x-0 bottom-0 max-sm:-bottom-1 w-full"
                 xmlns="http://www.w3.org/2000/svg"
                 width="505"
                 height="24"
