@@ -57,6 +57,65 @@ import otherProjects5 from "../../public/projects/othersProjects/5.png";
 import otherProjects6 from "../../public/projects/othersProjects/6.png";
 import otherProjects7 from "../../public/projects/othersProjects/7.png";
 
+export const otherProjects = [
+  {
+    img: otherProjects1,
+    name: "Gen Kasir",
+    link: "https://gen-kasir.vercel.app/",
+    desc: "Gen Cashier is a financial cashier application that effectively manages stock and inventory, providing ease in carrying out business operations.",
+    github: "https://github.com/bruteforce10/aplikasi-kasir-react-firebase",
+    skills: ["React", "Firebase", "SASS", "TailW", "Redux"],
+  },
+  {
+    img: otherProjects2,
+    name: "Final Landing Page Progate",
+    link: "https://project-akhir-progate.vercel.app/",
+    github: "https://github.com/bruteforce10/project-akhir",
+    desc: "This is the Final Project Landing Page from Progate's bootcamp, showcasing seamless DOM interaction achieved through manual vanilla JavaScript",
+    skills: ["HTML", "JavaScript", "CSS"],
+  },
+  {
+    img: otherProjects3,
+    name: "Web Crypto",
+    link: "https://web-crypto-beta.vercel.app/",
+    github: "https://github.com/bruteforce10/web-crypto",
+    desc: "This is the first landing page I created using React technology, an achievement I am very proud of.",
+    skills: ["React", "Sass", "TailW"],
+  },
+  {
+    img: otherProjects4,
+    name: "To-Do List",
+    link: "https://todoapps-two.vercel.app/",
+    github: "https://github.com/bruteforce10/todoapps",
+    desc: "The To-Do List web application allows users to efficiently and easily record and manage their task lists.",
+    skills: ["HTML", "CSS", "JavaScript", "Jquery"],
+  },
+  {
+    img: otherProjects5,
+    name: "FizzBuzz",
+    link: "https://fizz-buzz-dusky.vercel.app/",
+    github: "https://github.com/bruteforce10/FizzBuzz",
+    desc: "The FizzBuzz project from the Progeth bootcamp deepened my understanding of basic concepts such as loops, if-else conditions, and modulus operations.",
+    skills: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    img: otherProjects6,
+    name: "Pildun Qatar",
+    link: "https://jadwal-pildun-qatar.vercel.app/",
+    github: "https://github.com/bruteforce10/jadwal-pildun-qatar",
+    desc: "This website is designed to track the schedule, results, and latest information about the World Cup with a responsive and intuitive interface.",
+    skills: ["Next JS", "TailW", "Node JS"],
+  },
+  {
+    img: otherProjects7,
+    name: "E-Matarial Assistant",
+    link: "https://drive.google.com/file/d/1jbkYqC0RMliQl74yuGgj-XQmyoCtSm_D/view?usp=sharing",
+    github: "https://github.com/bruteforce10/e-material",
+    desc: "Material Assistant is a material calculation application for 2-story buildings designed for the general public, contractors, and related students. The calculation standards of this application adhere to government regulations, specifically the Ministry of Public Works' 'Module 01: SNI Compliant Houses",
+    skills: ["React", "CSS", "Node JS"],
+  },
+];
+
 export const LisenceResult = [
   {
     img: lisence4,
@@ -152,8 +211,10 @@ export const projectsResult = [
     descSecond:
       "It includes 17 construction calculations aligned with Indonesian National Standards (SNI), ensuring precise results.<br /><br />Plus, you can export data to Excel. Sipilku Estimate makes project planning a breeze! 💪",
     image: [show1, show2, show3, show4],
-    link: "sipilkuestimate.dev",
+    link: "sipilku.estimate",
+    linkWeb: "https://sipilku.vercel.app/",
     github: "sipilku",
+    linkGitHub: "https://github.com/bruteforce10/kalkulatormaterial",
     skills: ["HTML", "JavaScript", "CSS", "BootS"],
   },
   {
@@ -164,7 +225,9 @@ export const projectsResult = [
       "Explore my works that blend imagination and expertise in the realms of design and video editing  🎨🎥",
     image: [show5, show6, show7, show8, show9],
     link: "firdiaudi.xyz",
+    linkWeb: "https://firdiaudi.xyz/",
     github: "myPortofolio",
+    linkGitHub: "https://github.com/bruteforce10/myResume",
     skills: ["HTML", "JavaScript", "SASS", "BootS", "Firebase"],
   },
   {
@@ -175,7 +238,9 @@ export const projectsResult = [
       "Connectic was created by designing a Minimum Viable Product (MVP) system by harnessing APIs from the courses I undertook. <br/><br/> It comes equipped with various CRUD, account authentication, as well as filtering and searching capabilities, making it user-friendly. 🚀",
     image: [show10, show11, show12, show13, show14, show15],
     link: "connectic.vercel.app",
+    linkWeb: "https://connectic.vercel.app/",
     github: "connectic",
+    linkGitHub: "https://github.com/bruteforce10/connectic",
     skills: ["React", "Vercel", "SASS", "TailW", ""],
   },
 ];

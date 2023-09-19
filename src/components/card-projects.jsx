@@ -9,6 +9,7 @@ import { motion, useInView } from "framer-motion";
 import { mySkills } from "@/lib/data";
 import SlideProjects from "./slide-projects";
 import useSectionView from "@/lib/hook";
+import Link from "next/link";
 
 const CardProjects = ({
   image,
@@ -18,6 +19,8 @@ const CardProjects = ({
   link,
   github,
   skills,
+  linkWeb,
+  linkGitHub,
 }) => {
   const refCard = useRef(null);
   const { ref } = useSectionView("#projects");
@@ -80,86 +83,92 @@ const CardProjects = ({
           <p dangerouslySetInnerHTML={{ __html: descSecond }}></p>
         </div>
 
-        <div className="bg-card group cursor-pointer relative z-[2] w-fit  space-y-[0.2rem]">
-          <div className="flex justify-between">
-            <div className="flex gap-2 items-center  ">
-              <div className="relative w-4 h-4 z-[1]">
-                <motion.div
-                  animate={{
-                    scale: [1, 1.2, 1, 1.2, 1],
-                    opacity: [1, 0.8, 1, 0.8, 1],
-                  }}
-                  transition={{
-                    duration: 2,
-                    ease: [0, 0, 0.2, 1],
-                    repeat: Infinity,
-                  }}
-                  className="bg-[#40F4B2]/30 w-4 h-4 rounded-full "
-                >
-                  {" "}
-                </motion.div>
-                <div className="bg-[#40F4B2] w-[.55rem] h-[.55rem]  rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
-              </div>
-
-              <p className="text-[1rem] text-[#3EEBAE]  font-medium leading-none">
-                Live in production
-              </p>
-            </div>
-            <div className="py-[0.4rem] max-sm:scale-[.8] px-[0.5rem] group-hover:translate-x-[.4rem] group-hover:-translate-y-[.4rem] transition-all  rounded-md shadow-md bg-[#0D2633] ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="13"
-                height="15"
-                viewBox="0 0 13 15"
-                fill="none"
-              >
-                <path
-                  d="M5.5991 0.599853C5.30003 0.599853 5.05757 0.860882 5.05757 1.18303C5.05757 1.5051 5.30003 1.7662 5.5991 1.7662H11.1365L0.161646 13.585C-0.0538826 13.8172 -0.0538826 14.1936 0.161646 14.4257C0.377247 14.6579 0.726787 14.6579 0.942387 14.4257L11.9169 2.60714V8.56991C11.9169 8.89197 12.1594 9.15308 12.4585 9.15308C12.7575 9.15308 13 8.89197 13 8.56991V1.18303C13 0.860882 12.7575 0.599853 12.4585 0.599853H5.5991Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-          </div>
-
-          <h4 className="md:text-[3rem]  sm:pr-[4rem]  text-start max-sm:text-[1.8rem] text-[2.5rem] font-semibold text-white leading-none">
-            {link}
-            <span className="ml-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="152"
-                height="11"
-                viewBox="0 0 152 11"
-                fill="none"
-              >
-                <path
-                  d="M2 6.04837L57.2659 3.9884C60.1258 3.8818 60.6229 8.02752 57.819 8.6001V8.6001L150 2.6001"
-                  stroke="url(#paint0_linear_88_46)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_88_46"
-                    x1="76"
-                    y1="-16.5"
-                    x2="76"
-                    y2="20.6001"
-                    gradientUnits="userSpaceOnUse"
+        <Link href={linkWeb} className="block" target="_blank">
+          <div className="bg-card group px-5 py-5 cursor-pointer relative z-[2] w-fit  space-y-[0.2rem]">
+            <div className="flex justify-between">
+              <div className="flex gap-2 items-center  ">
+                <div className="relative w-4 h-4 z-[1]">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.2, 1, 1.2, 1],
+                      opacity: [1, 0.8, 1, 0.8, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      ease: [0, 0, 0.2, 1],
+                      repeat: Infinity,
+                    }}
+                    className="bg-[#40F4B2]/30 w-4 h-4 rounded-full "
                   >
-                    <stop stopColor="#40F4B2" stopOpacity="0" />
-                    <stop
-                      offset="0.961458"
-                      stopColor="#40F4B2"
-                      stopOpacity="0.6"
-                    />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </span>
-          </h4>
-        </div>
+                    {" "}
+                  </motion.div>
+                  <div className="bg-[#40F4B2] w-[.55rem] h-[.55rem]  rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+                </div>
 
-        <div className="space-y-[.5rem] text-white text-start cursor-pointer relative z-[2]">
+                <p className="text-[1rem] text-[#3EEBAE]  font-medium leading-none">
+                  Live in production
+                </p>
+              </div>
+              <div className="py-[0.4rem] max-sm:scale-[.8] px-[0.5rem] group-hover:translate-x-[.4rem] group-hover:-translate-y-[.4rem] transition-all  rounded-md shadow-md bg-[#0D2633] ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="15"
+                  viewBox="0 0 13 15"
+                  fill="none"
+                >
+                  <path
+                    d="M5.5991 0.599853C5.30003 0.599853 5.05757 0.860882 5.05757 1.18303C5.05757 1.5051 5.30003 1.7662 5.5991 1.7662H11.1365L0.161646 13.585C-0.0538826 13.8172 -0.0538826 14.1936 0.161646 14.4257C0.377247 14.6579 0.726787 14.6579 0.942387 14.4257L11.9169 2.60714V8.56991C11.9169 8.89197 12.1594 9.15308 12.4585 9.15308C12.7575 9.15308 13 8.89197 13 8.56991V1.18303C13 0.860882 12.7575 0.599853 12.4585 0.599853H5.5991Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <h4 className="md:text-[3rem]  sm:pr-[4rem]  text-start max-sm:text-[1.8rem] text-[2.5rem] font-semibold text-white leading-none">
+              {link}
+              <span className="ml-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="152"
+                  height="11"
+                  viewBox="0 0 152 11"
+                  fill="none"
+                >
+                  <path
+                    d="M2 6.04837L57.2659 3.9884C60.1258 3.8818 60.6229 8.02752 57.819 8.6001V8.6001L150 2.6001"
+                    stroke="url(#paint0_linear_88_46)"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_88_46"
+                      x1="76"
+                      y1="-16.5"
+                      x2="76"
+                      y2="20.6001"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#40F4B2" stopOpacity="0" />
+                      <stop
+                        offset="0.961458"
+                        stopColor="#40F4B2"
+                        stopOpacity="0.6"
+                      />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+            </h4>
+          </div>
+        </Link>
+
+        <Link
+          href={linkGitHub}
+          target="_blank"
+          className="space-y-[.5rem] block text-white text-start cursor-pointer relative z-[2]"
+        >
           <h4 className="text-4xl max-sm:text-2xl font-semibold">{github} </h4>
           <p className="text-white/60 text-[1.2rem] max-sm:text-[.9rem] ">
             on
@@ -187,7 +196,7 @@ const CardProjects = ({
             </span>
             github.com
           </p>
-        </div>
+        </Link>
 
         <div ref={ref}>
           <h3 className="text-white text-4xl max-sm:text-2xl font-medium text-start">

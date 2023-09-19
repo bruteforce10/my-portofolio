@@ -177,7 +177,7 @@ function MySertificate() {
           {isDropdown <= 6 && (
             <div
               onClick={() => setDropdown(20)}
-              className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
+              className="group text-center px-6 py-2 text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
             >
               <span className="inline-block group-hover:translate-y-1 transition-all">
                 👇
@@ -186,6 +186,35 @@ function MySertificate() {
               Show All
             </div>
           )}
+        </div>
+        <div className="absolute bottom-0 -mb-2">
+          <svg
+            className="w-full"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2516"
+            height="16"
+            viewBox="0 0 2516 16"
+            fill="none"
+          >
+            <path
+              d="M0 8C1474.7 8 2291.79 8 2516 8"
+              stroke="url(#paint0_linear_268_122)"
+              stroke-width="15"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_268_122"
+                x1="2375.54"
+                y1="8.94218"
+                x2="-356.811"
+                y2="8.94218"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#88EBFB" />
+                <stop offset="1" stop-color="white" stop-opacity="0.2" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </div>
     </>

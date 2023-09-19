@@ -9,6 +9,8 @@ import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
 import NavbarProject from "@/components/navbar-projects";
 import MySertificate from "@/components/License";
+import Blog from "@/components/Blog";
+import Contact from "@/components/Contact";
 
 const defaultFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -39,6 +41,8 @@ export default function Home() {
         <Projects />
         <WorkExperience />
         <MySertificate />
+        <Blog />
+        <Contact />
       </section>
     </main>
   );

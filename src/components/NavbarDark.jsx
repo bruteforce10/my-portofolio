@@ -9,6 +9,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import clsx from "clsx";
 import ListNav from "./list-nav";
 import { navList } from "@/lib/data";
+import strip from "../../public/icon/strip.svg";
 
 function NavbarDark() {
   const { activeSection } = MyContext();
@@ -113,11 +114,11 @@ function NavbarDark() {
                     "relative",
                     activeSection === item.href && "font-medium"
                   )}
-                  href={item.href}
+                  href={`http://localhost:3000/${item.href}`}
                 >
                   {item.name}
                   {activeSection === item.href && (
-                    <span className="absolute z-[-1] inset-0 mt-2 w-[80px]">
+                    <span className="absolute z-[-1] inset-0 mt-2 w-[70px]">
                       <Image src={strip} alt="strip" />
                     </span>
                   )}

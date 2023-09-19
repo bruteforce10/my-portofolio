@@ -54,7 +54,7 @@ const Projects = () => {
           </div>
           <div
             onClick={() => router.push("/other-projects")}
-            className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
+            className="group text-center px-6 py-3 text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
           >
             <span className="inline-block mr-2 group-hover:translate-x-1 transition-all">
               👉
