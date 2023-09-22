@@ -22,7 +22,7 @@ function Blog() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 3 }}
             style={fontPrimary.style}
-            className="md:text-[3.5rem] max-md:text-[2.4rem] max-md:px-8 text-white max-sm:text-[1.8rem]"
+            className="md:text-[3.5rem] max-md:text-[2.5rem] max-md:px-8 text-white max-sm:text-[1.8rem]"
           >
             ✍️
             <span className="relative">
