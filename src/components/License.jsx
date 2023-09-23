@@ -14,6 +14,7 @@ function MySertificate() {
   const [lisenceName, setLisenceName] = useState("");
   const [isDropdown, setDropdown] = useState(6);
   const { ref } = useSectionView("#lisence", 0.2);
+  const [showText, setShowText] = useState(false);
 
   return (
     <>
@@ -105,8 +106,11 @@ function MySertificate() {
                       <motion.div
                         initial={{ opacity: 0 }}
                         whileHover={{ opacity: 1 }}
-                        whileFocus={{ opacity: 1 }}
+                        animate={{ opacity: showText ? 1 : 0 }}
                         transition={{ duration: 0.2 }}
+                        onClick={() => {
+                          setShowText(!showText);
+                        }}
                         className="bg-hover group-hover:z-50 transition-all  z-[-1] absolute  pl-6 w-full h-full rounded-xl"
                       >
                         <div className="w-full h-full flex-col justify-end pb-6 flex gap-y-4  px-4">

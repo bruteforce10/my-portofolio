@@ -211,7 +211,7 @@ export const projectsResult = [
     descSecond:
       "It includes 17 construction calculations aligned with Indonesian National Standards (SNI), ensuring precise results.<br /><br />Plus, you can export data to Excel. Sipilku Estimate makes project planning a breeze! 💪",
     image: [show1, show2, show3, show4],
-    link: "sipilku.estimate",
+    link: "sipilku.app",
     linkWeb: "https://sipilku.vercel.app/",
     github: "sipilku",
     linkGitHub: "https://github.com/bruteforce10/kalkulatormaterial",
@@ -237,7 +237,7 @@ export const projectsResult = [
     descSecond:
       "Connectic was created by designing a Minimum Viable Product (MVP) system by harnessing APIs from the courses I undertook. <br/><br/> It comes equipped with various CRUD, account authentication, as well as filtering and searching capabilities, making it user-friendly. 🚀",
     image: [show10, show11, show12, show13, show14, show15],
-    link: "connectic.vercel.app",
+    link: "connectic.app",
     linkWeb: "https://connectic.vercel.app/",
     github: "connectic",
     linkGitHub: "https://github.com/bruteforce10/connectic",
