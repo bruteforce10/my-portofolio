@@ -1,21 +1,37 @@
 import useSectionView from "@/lib/hook";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { MyContext } from "@/lib/context/AppContext";
 import LinkBlog from "./link-blog";
+import pattern from "../../public/image-work.webp";
+import { getRecentPosts } from "../../services";
 
 function Blog() {
   const { fontPrimary } = MyContext();
   const { ref } = useSectionView("#blog", 0.2);
   const refCard = useRef(null);
   const isInView = useInView(refCard, { once: true });
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getRecentPosts().then((res) => {
+      setPosts(res);
+      console.log(res);
+    });
+  }, []);
+
   return (
     <div className="bg-[#071F2C] relative">
       <div
         id="blog"
-        className="max-w-[1120px] mx-auto pt-[11rem] md:px-6 pb-[100px] space-y-[5rem] scroll-mt-[1rem]"
+        className="max-w-[1120px] relative mx-auto pt-[11rem] md:px-6 pb-[100px] space-y-[5rem] scroll-mt-[1rem]"
       >
+        <Image
+          src={pattern}
+          alt="pattern"
+          className="absolute bottom-0 opacity-60  right-0 w-[90%] "
+        />
         <div className="text-center space-y-8 " ref={ref}>
           <motion.h2
             initial={{ opacity: 0, y: -100 }}
@@ -66,32 +82,31 @@ function Blog() {
             help others on their web development journey.
           </motion.p>
         </div>
-        <div className="grid md:grid-cols-2  gap-8 px-8">
-          {[1, 2, 3, 4].map((item, index) => (
+        <div className="grid md:grid-cols-2  gap-8 px-8" ref={refCard}>
+          {posts.map((item, index) => (
             <motion.div
-              key={index}
-              whileHover={{
-                scale: 0.95,
+              onClick={() => {
+                window.open(`post/${item.slug}`, "_blank");
               }}
+              key={index}
               transition={{
                 duration: 0.2,
                 type: "spring",
                 stiffness: 100,
                 damping: 20,
               }}
-              ref={refCard}
               style={{
                 opacity: isInView ? 1 : 0,
                 transform: isInView ? "none" : "translateY(100px)",
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
-                transitionDelay: `${0.5 * index}s`,
+                transition: "all .9s cubic-bezier(0.17, 0.55, 0.55, 1)",
+                transitionDelay: `${index}s`,
               }}
-              className="bg-card px-8 text-white py-12 space-y-4"
+              className="bg-card px-8 z-[2]  cursor-pointer text-white py-12 space-y-4"
             >
-              <p className="text-base text-[#0987A7]">Tips & Trick</p>
-              <h3 className="text-2xl font-medium">
-                Cara Mengatur Margin Menjadi Center
-              </h3>
+              <p className="text-base text-[#0987A7]">
+                {item.categories.map((category) => category.name)}
+              </p>
+              <h3 className="text-2xl font-medium">{item.title}</h3>
             </motion.div>
           ))}
         </div>

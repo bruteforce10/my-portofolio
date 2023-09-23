@@ -11,6 +11,7 @@ import NavbarProject from "@/components/navbar-projects";
 import MySertificate from "@/components/License";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
+import Head from "next/head";
 
 const defaultFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -29,8 +30,15 @@ export default function Home() {
 
   return (
     <main className={`${defaultFont.className}`}>
+      <Head>
+        <title>Firdi Audi - Frontend Developer</title>
+        <meta
+          name="description"
+          content="Saya adalah seorang Front-End Developer bernama Firdi, dengan fokus pada menciptakan antarmuka pengguna yang menarik dan responsif. Temukan bagaimana saya dapat membantu mewujudkan visi Anda dalam pengembangan front-end yang menarik dan fungsional. Hubungi saya sekarang!"
+        />{" "}
+      </Head>
       <section
-        className={`  bg-[url('../../public/background.webp')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-top`}
+        className={`  bg-[url('../../public/background.webp')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-top `}
       >
         <Navbar />
         <Header />

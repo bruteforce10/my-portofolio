@@ -66,6 +66,26 @@ export const getPostSearch = async (slug) => {
   return result.postsConnection.edges;
 };
 
+export const getRecentPosts = async () => {
+  const query = gql`
+    query GetPostDetails() {
+      posts(
+        orderBy: createdAt_ASC
+        last: 4
+      ) {
+        title
+        categories {
+          name
+        }
+        slug
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result.posts;
+};
+
 export const getPostDetails = async (slug) => {
   const query = gql`
     query GetPostDetails($slug: String!) {

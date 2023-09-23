@@ -66,7 +66,7 @@ export default function PostDetails({ posts }) {
 
   return (
     <Layout>
-      <div className="text-white max-w-[800px] mx-auto text-center  space-y-6">
+      <div className="text-white max-w-[800px] mx-auto text-center  space-y-8">
         <div className="space-y-4">
           <div className="flex items-center justify-center gap-4 opacity-60">
             <span className="text-sm">
@@ -79,7 +79,7 @@ export default function PostDetails({ posts }) {
               {moment(createdAt).format("MMM DD, YYYY")}
             </span>
           </div>
-          <h1 className="text-3xl font-medium ">{title}</h1>
+          <h1 className="text-3xl font-medium pb-4 ">{title}</h1>
         </div>
         <Image
           src={featuredImaged.url}
