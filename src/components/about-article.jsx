@@ -4,26 +4,26 @@ import gsap from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const AboutArticle = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const splitTypes = document.querySelectorAll(".reveal-type");
-    splitTypes.forEach((char) => {
-      const text = new SplitType(char, { types: " chars" });
-      gsap.from(text.chars, {
-        scrollTrigger: {
-          trigger: char,
-          start: "top 80%",
-          end: "top 20%",
-          scrub: true,
-          markers: false,
-        },
-        y: -20,
-        scaleY: 0,
-        transformOrigin: "top",
-        stagger: 0.1,
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   const splitTypes = document.querySelectorAll(".reveal-type");
+  //   splitTypes.forEach((char) => {
+  //     const text = new SplitType(char, { types: " chars" });
+  //     gsap.from(text.chars, {
+  //       scrollTrigger: {
+  //         trigger: char,
+  //         start: "top 80%",
+  //         end: "top 20%",
+  //         scrub: true,
+  //         markers: false,
+  //       },
+  //       y: -20,
+  //       scaleY: 0,
+  //       transformOrigin: "top",
+  //       stagger: 0.1,
+  //     });
+  //   });
+  // }, []);
   return (
     <article className="reveal-type text-left max-w-[70rem] mt-[2rem] md:mt-[3rem] space-y-6">
       <p className="md:text-[1.7rem] text-[1.2rem]  text-text leading-relaxed">

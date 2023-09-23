@@ -27,6 +27,7 @@ export const getPosts = async () => {
               name
               slug
             }
+            featuredPost
           }
         }
       }
@@ -35,6 +36,34 @@ export const getPosts = async () => {
 
   const results = await request(graphqlAPI, query);
   return results.postsConnection.edges;
+};
+
+export const getPostSearch = async (slug) => {
+  const query = gql`
+    query GetSearch($slug: String!) {
+      postsConnection(
+        where: { expcerpt_contains: $slug, NOT: { title_contains: $slug } }
+      ) {
+        edges {
+          node {
+            slug
+            title
+            createdAt
+            expcerpt
+            categories {
+              name
+            }
+            featuredImaged {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+  return result.postsConnection.edges;
 };
 
 export const getPostDetails = async (slug) => {
@@ -69,6 +98,31 @@ export const getPostDetails = async (slug) => {
 
   const result = await request(graphqlAPI, query, { slug });
   return result.post;
+};
+
+export const getCategoriesPosts = async (slug) => {
+  const query = gql`
+    query GetCategoriesPost($slug: String!) {
+      categories(where: { slug: $slug }) {
+        name
+        posts {
+          slug
+          title
+          createdAt
+          expcerpt
+          categories {
+            name
+          }
+          featuredImaged {
+            url
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+  return result.categories;
 };
 
 export const getCategories = async () => {

@@ -80,7 +80,7 @@ export default function CommentForm({ slug }) {
   };
 
   return (
-    <div>
+    <div className="text-white">
       <h3 className="text-white text-2xl font-semibold text-start mb-4">
         Leave a Reply
       </h3>
@@ -134,7 +134,7 @@ export default function CommentForm({ slug }) {
         <button
           type="button"
           onClick={handleCommentSubmission}
-          className="transition duration-500 ease hover:bg-indigo-900 inline-block cursor-pointer bg-indigo-600 text-lg rounded-full text-white px-8 py-3"
+          className="transition duration-500 ease bg-card px-6 py-3 hover:scale-95"
         >
           Post Comment
         </button>

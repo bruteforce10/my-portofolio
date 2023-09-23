@@ -10,13 +10,12 @@ export default function Comments({ slug }) {
     getComments(slug).then((result) => {
       setComments(result);
     });
-    console.log(comments);
   }, []);
 
   return (
     <>
       {comments.length > 0 && (
-        <div className=" pb-12 mb-8 text-start">
+        <div className=" pb-12 mb-8 text-start text-white">
           <h3 className="text-xl mb-8 font-semibold border-b pb-4">
             {comments.length} Comments
           </h3>

@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main className={`${defaultFont.className}`}>
       <section
-        className={`  bg-[url('../../public/background.svg')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-center`}
+      // className={`  bg-[url('../../public/background.svg')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-center`}
       >
         <Navbar />
         <Header />

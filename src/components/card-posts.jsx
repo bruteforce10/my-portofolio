@@ -21,21 +21,21 @@ export default function CardPosts({
         width={500}
         height={300}
       />
-      <div className="space-y-1">
+      <div className="space-y-2">
         <div className="flex items-center gap-4 opacity-60">
-          <span className="text-sm">
+          <span className="text-xs">
             {categories.map((category) => (
               <span key={category.slug}>{category.name}</span>
             ))}
           </span>
           <div className="text-4xl flex justify-center items-center h-1 rounded-full w-1 bg-white"></div>
-          <span className="text-sm">
+          <span className="text-xs">
             {moment(createdAt).format("MMM DD, YYYY")}
           </span>
         </div>
         <h1 className="text-xl font-medium">{title}</h1>
       </div>
-      <p className="text-white/60 text-md ">{expcerpt}</p>
+      <p className="text-white/60 text-sm leading-relaxed">{expcerpt}</p>
     </Link>
   );
 }

@@ -7,17 +7,37 @@ import { motion } from "framer-motion";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import clsx from "clsx";
-import ListNav from "./list-nav";
-import { navList } from "@/lib/data";
 import strip from "../../public/icon/strip.svg";
 import { getCategories } from "../../services";
+import { useRouter } from "next/router";
+import Router from "next/router";
 
 function NavbarBlog() {
   const { activeSection } = MyContext();
+  const { query, pathname } = useRouter();
   const { fontPrimary } = MyContext();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [categories, setCategories] = useState([]);
+  const [search, setSearch] = useState("");
+
+  const onChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    Router.replace({
+      pathname: "/blog/search",
+      query: {
+        q: search,
+      },
+    });
+  };
+
+  const handlePath = (slug) => {
+    Router.replace(`/blog/${slug}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,8 +51,6 @@ function NavbarBlog() {
     getCategories().then((res) => {
       setCategories(res);
     });
-
-    console.log(categories);
 
     window.addEventListener("scroll", handleScroll);
   }, []);
@@ -63,18 +81,75 @@ function NavbarBlog() {
             "bg-white  p-4 m-4 top-2 rounded-xl z-[100] left-0 right-0 transition-all",
             isOpen ? "fixed" : "hidden"
           )}
-          onClick={() => setIsOpen(!isOpen)}
         >
           <div className="flex justify-between z-50 items-center">
             <div className="h-[4rem] w-[4rem] rounded-full overflow-hidden">
               <Image src={profile} alt="firdi-audi" className="w-[4rem] " />
             </div>
-            <div className="border-text/60 border-[1.7px] rounded-md p-2">
-              <AiOutlineClose size={20} className="cursor-pointer text-white" />
+            <div
+              className="border-text/60 border-[1.7px] rounded-md p-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <AiOutlineClose size={20} className="cursor-pointer " />
             </div>
           </div>
           <ul className="space-y-6 mt-6">
-            <ListNav />
+            <li>
+              <Link href="/blog">Home</Link>
+            </li>
+            {categories.map((item, index) => (
+              <li key={index}>
+                <Link
+                  className={clsx(
+                    "relative",
+                    activeSection === item.slug && "font-medium"
+                  )}
+                  href={`category/${item.slug}`}
+                >
+                  {item.name}
+                  {activeSection === item.slug && (
+                    <span className="absolute z-[-1] inset-0 mt-2 w-[70px]">
+                      <Image src={strip} alt="strip" />
+                    </span>
+                  )}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/">Work with me</Link>
+            </li>
+            <li className="relative ">
+              <input
+                type="text"
+                className="bg-gradient-lisence border-2 w-full border-black/10 text-white/60 pl-12 py-3 rounded-full"
+                placeholder="Search"
+              />
+              <svg
+                className="absolute left-4 top-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+              >
+                <g opacity="0.1">
+                  <path
+                    d="M6.41667 11.6829C8.994 11.6829 11.0833 9.59361 11.0833 7.01628C11.0833 4.43895 8.994 2.34961 6.41667 2.34961C3.83934 2.34961 1.75 4.43895 1.75 7.01628C1.75 9.59361 3.83934 11.6829 6.41667 11.6829Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.2499 12.85L9.7124 10.3125"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </li>
           </ul>
         </motion.div>
         {/* end nav mobile */}
@@ -114,37 +189,47 @@ function NavbarBlog() {
           </div>
         </div>
         <div className="w-8/12 max-sm:w-full">
-          <ul className="lg:flex hidden gap-10 text-white justify-end items-center">
+          <ul className="xl:flex hidden gap-10 text-white justify-end items-center">
             <li>
-              <Link href="/blog">Home</Link>
+              <Link
+                href="/blog"
+                className={clsx(
+                  "relative",
+                  pathname === "/blog" &&
+                    "font-medium border-b-2 border-[#4892A1]"
+                )}
+              >
+                Home
+              </Link>
             </li>
             {categories.map((item, index) => (
               <li key={index}>
-                <Link
+                <div
+                  onClick={() => handlePath(item.slug)}
                   className={clsx(
-                    "relative",
-                    activeSection === item.slug && "font-medium"
+                    "relative cursor-pointer",
+                    query.slug === item.slug &&
+                      "font-medium border-b-2 border-[#4892A1]"
                   )}
-                  href={`category/${item.slug}`}
                 >
                   {item.name}
-                  {activeSection === item.slug && (
-                    <span className="absolute z-[-1] inset-0 mt-2 w-[70px]">
-                      <Image src={strip} alt="strip" />
-                    </span>
-                  )}
-                </Link>
+                </div>
               </li>
             ))}
             <li>
               <Link href="/">Work with me</Link>
             </li>
             <li className="relative">
-              <input
-                type="text"
-                className="bg-[#1F2937] text-white/60 pl-12 py-3 rounded-full"
-                placeholder="Search"
-              />
+              <form onSubmit={handleSearch}>
+                <input
+                  type="text"
+                  className="bg-[#1F2937] text-white/60 pl-12 py-3 rounded-full"
+                  placeholder="Search"
+                  name="search"
+                  value={search}
+                  onChange={onChange}
+                />
+              </form>
               <svg
                 className="absolute left-4 top-4"
                 xmlns="http://www.w3.org/2000/svg"
@@ -157,16 +242,16 @@ function NavbarBlog() {
                   <path
                     d="M6.41667 11.6829C8.994 11.6829 11.0833 9.59361 11.0833 7.01628C11.0833 4.43895 8.994 2.34961 6.41667 2.34961C3.83934 2.34961 1.75 4.43895 1.75 7.01628C1.75 9.59361 3.83934 11.6829 6.41667 11.6829Z"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M12.2499 12.85L9.7124 10.3125"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </g>
               </svg>
@@ -176,7 +261,7 @@ function NavbarBlog() {
           {/* toggle navbar */}
           <div
             className={
-              "p-2 rounded-xl  flex justify-end  lg:hidden cursor-pointer"
+              "p-2 rounded-xl  flex justify-end  xl:hidden cursor-pointer"
             }
             onClick={(event) => {
               event.stopPropagation();

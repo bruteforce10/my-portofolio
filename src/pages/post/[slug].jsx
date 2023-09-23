@@ -67,18 +67,20 @@ export default function PostDetails({ posts }) {
   return (
     <Layout>
       <div className="text-white max-w-[800px] mx-auto text-center  space-y-6">
-        <div className="flex items-center justify-center gap-4 opacity-60">
-          <span className="text-sm">
-            {categories.map((category) => (
-              <span key={category.slug}>{category.name}</span>
-            ))}
-          </span>
-          <div className="text-4xl flex justify-center items-center h-1 rounded-full w-1 bg-white"></div>
-          <span className="text-sm">
-            {moment(createdAt).format("MMM DD, YYYY")}
-          </span>
+        <div className="space-y-4">
+          <div className="flex items-center justify-center gap-4 opacity-60">
+            <span className="text-sm">
+              {categories.map((category) => (
+                <span key={category.slug}>{category.name}</span>
+              ))}
+            </span>
+            <div className="text-4xl flex justify-center items-center h-1 rounded-full w-1 bg-white"></div>
+            <span className="text-sm">
+              {moment(createdAt).format("MMM DD, YYYY")}
+            </span>
+          </div>
+          <h1 className="text-3xl font-medium ">{title}</h1>
         </div>
-        <h1 className="text-3xl font-medium ">{title}</h1>
         <Image
           src={featuredImaged.url}
           alt={title}
@@ -95,6 +97,8 @@ export default function PostDetails({ posts }) {
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </article>
+      </div>
+      <div className="mt-14 max-w-[800px] mx-auto  space-y-12">
         <CommentForm slug={posts.slug} />
         <Comments slug={posts.slug} />
       </div>
@@ -104,7 +108,6 @@ export default function PostDetails({ posts }) {
 
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
-  console.log(data);
 
   return {
     props: { posts: data },
@@ -113,7 +116,6 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const posts = await getPosts();
-  console.log(posts);
 
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
