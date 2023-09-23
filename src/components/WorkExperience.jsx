@@ -9,7 +9,7 @@ import CardWork from "./card-work";
 
 function WorkExperience() {
   const { fontPrimary } = MyContext();
-  const { ref } = useSectionView("#work", 0.2);
+  const { ref } = useSectionView("#work", 0.1);
   return (
     <div className="bg-[url('../../public/bg-work.svg')] relative">
       <div

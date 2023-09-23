@@ -105,6 +105,7 @@ function MySertificate() {
                       <motion.div
                         initial={{ opacity: 0 }}
                         whileHover={{ opacity: 1 }}
+                        whileFocus={{ opacity: 1 }}
                         transition={{ duration: 0.2 }}
                         className="bg-hover group-hover:z-50 transition-all  z-[-1] absolute  pl-6 w-full h-full rounded-xl"
                       >
@@ -165,7 +166,7 @@ function MySertificate() {
               onClick={() => {
                 setDropdown(6);
               }}
-              className="group text-center text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
+              className="group text-center px-6 py-2 text-white cursor-pointer text-xl font-semibold w-fit mx-auto bg-card"
             >
               <span className="inline-block group-hover:-translate-y-1 transition-all">
                 👆
