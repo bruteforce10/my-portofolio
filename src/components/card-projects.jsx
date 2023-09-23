@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useRef } from "react";
-import border from "../../public/icon/border.png";
-import pattern from "../../public/icon/pattern.png";
+import border from "../../public/icon/border.webp";
+import pattern from "../../public/icon/pattern.webp";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
