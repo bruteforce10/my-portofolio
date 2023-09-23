@@ -1,5 +1,4 @@
 import light from "../../../public/icon/light.svg";
-import imagePhoto from "../../../public/contoh.png";
 import NavbarDark from "@/components/NavbarDark";
 import Image from "next/image";
 import React from "react";
