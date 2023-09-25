@@ -12,13 +12,10 @@ export default function Search() {
   console.log(q);
 
   useEffect(() => {
-    {
-      q &&
-        getPostSearch(q).then((res) => {
-          console.log(res);
-          setPosts(res);
-        });
-    }
+    getPostSearch(q).then((res) => {
+      console.log(res);
+      setPosts(res);
+    });
   }, [q]);
 
   return (

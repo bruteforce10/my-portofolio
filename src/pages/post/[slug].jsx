@@ -23,11 +23,25 @@ export default function PostDetails({ posts }) {
       if (obj.underline) {
         modifiedText = <u key={index}>{text}</u>;
       }
+
+      if (obj.code) {
+        modifiedText = (
+          <code
+            className="bg-[#366da0] text-white py-[.5px] px-[5px] rounded-md"
+            key={index}
+          >
+            {text}
+          </code>
+        );
+      }
     }
     switch (type) {
       case "heading-three":
         return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
+          <h3
+            key={index}
+            className="text-2xl text-white font-medium mt-12 mb-4"
+          >
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -43,7 +57,7 @@ export default function PostDetails({ posts }) {
         );
       case "heading-four":
         return (
-          <h4 key={index} className="text-md font-semibold mb-4">
+          <h4 key={index} className="text-xl text-white font-medium mb-4">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -58,6 +72,25 @@ export default function PostDetails({ posts }) {
             width={obj.width}
             src={obj.src}
           />
+        );
+      case "code-block":
+        return (
+          <div className="mockup-code text-white mb-6">
+            {modifiedText.map((item, i) => {
+              const language = item.split("&");
+              return (
+                <React.Fragment key={i}>
+                  {language.map((item, i) => {
+                    return (
+                      <pre key={i}>
+                        <code>{item}</code>
+                      </pre>
+                    );
+                  })}
+                </React.Fragment>
+              );
+            })}
+          </div>
         );
       default:
         return modifiedText;
