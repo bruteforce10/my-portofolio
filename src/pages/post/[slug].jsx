@@ -49,7 +49,7 @@ export default function PostDetails({ posts }) {
         );
       case "paragraph":
         return (
-          <p key={index} className="mb-8">
+          <p key={index} className="mb-8 leading-relaxed">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -63,6 +63,15 @@ export default function PostDetails({ posts }) {
             ))}
           </h4>
         );
+      case "bulleted-list":
+        return (
+          <ul key={index} className="list-disc space-y-2 mb-6 ml-4">
+            {obj.children.map((item, index) => {
+              return <li key={index}>{item.children[0].children[0].text}</li>;
+            })}
+          </ul>
+        );
+
       case "image":
         return (
           <Image
@@ -71,6 +80,7 @@ export default function PostDetails({ posts }) {
             height={obj.height}
             width={obj.width}
             src={obj.src}
+            className="mb-4"
           />
         );
       case "code-block":
@@ -126,7 +136,6 @@ export default function PostDetails({ posts }) {
             const children = typeObj.children.map((item, itemindex) =>
               getContentFragment(itemindex, item.text, item)
             );
-
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </article>
@@ -139,19 +148,10 @@ export default function PostDetails({ posts }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const data = await getPostDetails(params.slug);
 
   return {
     props: { posts: data },
-  };
-}
-
-export async function getStaticPaths() {
-  const posts = await getPosts();
-
-  return {
-    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: false,
   };
 }
