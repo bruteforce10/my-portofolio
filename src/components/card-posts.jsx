@@ -17,7 +17,7 @@ export default function CardPosts({
       <Image
         src={featuredImaged.url}
         alt={title}
-        className="rounded-xl"
+        className="rounded-xl h-48 object-center w-full object-cover"
         width={500}
         height={300}
       />
