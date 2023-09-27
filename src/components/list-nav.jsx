@@ -14,7 +14,7 @@ const ListNav = () => {
         <li key={index}>
           <Link
             className={clsx(
-              "relative",
+              "relative text-text",
               activeSection === item.href && "font-medium"
             )}
             href={item.href}
