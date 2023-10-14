@@ -27,12 +27,12 @@ const AboutArticle = () => {
   return (
     <article className="reveal-type text-left max-w-[70rem] mt-[2rem] md:mt-[3rem] space-y-6">
       <p className="md:text-[1.7rem] text-[1.2rem]  text-text leading-relaxed">
-        I am a freelance frontend developer based in Tangerang Selatan,
-        Indonesia. Despite not having an IT background, I have a strong passion
-        and deep interest in web development, particularly in the frontend dev.
-        My journey began when I created an Android application using React
-        Native to calculate building materials for a house. It was during this
-        project that I fell in love with the world of programming.
+        I am a freelance frontend developer based in Jakarta, Indonesia. Despite
+        not having an IT background, I have a strong passion and deep interest
+        in web development, particularly in the frontend dev. My journey began
+        when I created an Android application using React Native to calculate
+        building materials for a house. It was during this project that I fell
+        in love with the world of programming.
       </p>
       <p className="reveal-type md:text-[1.7rem] text-[1.2rem]  text-text leading-relaxed">
         I have gained knowledge through various courses and self-study, diving

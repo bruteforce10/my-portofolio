@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { MyContext } from "@/lib/context/AppContext";
 import Image from "next/image";
-import profile from "../../public/profile.png";
+import profile from "../../public/profile.webp";
 import { motion } from "framer-motion";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -78,7 +78,7 @@ function NavbarDark() {
                   {item.name}
                   {activeSection === item.href && (
                     <span className="absolute z-[-1] inset-0 mt-2 w-[70px]">
-                      <Image src={strip} alt="strip" />
+                      <Image src={strip} alt="strip" width="auto" />
                     </span>
                   )}
                 </Link>
@@ -160,7 +160,7 @@ function NavbarDark() {
                   {item.name}
                   {activeSection === item.href && (
                     <span className="absolute z-[-1] inset-0 mt-2 w-[70px]">
-                      <Image src={strip} alt="strip" />
+                      <Image src={strip} alt="strip" width="auto" />
                     </span>
                   )}
                 </Link>

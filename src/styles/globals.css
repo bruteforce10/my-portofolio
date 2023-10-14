@@ -30,7 +30,16 @@
     );
     backdrop-filter: blur(2.5px);
   }
-
+  .bg-gradient-card {
+    background: radial-gradient(
+      124.13% 115.99% at 45.38% 46.37%,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(172, 226, 252, 0.2) 100%
+    );
+    backdrop-filter: blur(50px);
+    border-radius: 1rem;
+    border: 1.5px solid #fff;
+  }
   .bg-gradient-box {
     background: linear-gradient(116deg, #06141c 0%, #0a1c25 100.98%), #fff;
   }

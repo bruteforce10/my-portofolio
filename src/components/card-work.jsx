@@ -26,8 +26,8 @@ function CardWork({ logo, job, date, jobList }) {
               <path
                 d="M2.38771 10.6606C4.22061 11.6064 7.88077 13.7305 9.74523 15.5681C10.0576 15.876 10.6577 15.7378 10.7664 15.3128C12.3886 8.97063 15.9681 4.47765 21.0769 2.19805"
                 stroke="#004E9B"
-                stroke-width="3"
-                stroke-linecap="round"
+                strokeWidth="3"
+                strokeLinecap="round"
               />
             </svg>
           </span>

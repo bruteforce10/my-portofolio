@@ -2,7 +2,7 @@ import useSectionView from "@/lib/hook";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import profile from "../../public/profile.png";
+import profile from "../../public/profile.webp";
 import { MyContext } from "@/lib/context/AppContext";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { BsGithub, BsLinkedin } from "react-icons/bs";

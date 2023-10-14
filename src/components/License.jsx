@@ -204,7 +204,7 @@ function MySertificate() {
             <path
               d="M0 8C1474.7 8 2291.79 8 2516 8"
               stroke="url(#paint0_linear_268_122)"
-              stroke-width="15"
+              strokeWidth="15"
             />
             <defs>
               <linearGradient
@@ -216,7 +216,7 @@ function MySertificate() {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stop-color="#88EBFB" />
-                <stop offset="1" stop-color="white" stop-opacity="0.2" />
+                <stop offset="1" stop-color="white" stopOpacity="0.2" />
               </linearGradient>
             </defs>
           </svg>

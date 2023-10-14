@@ -36,6 +36,7 @@ export default function Home() {
           name="description"
           content="Saya adalah seorang Front-End Developer bernama Firdi, dengan fokus pada menciptakan antarmuka pengguna yang menarik dan responsif. Temukan bagaimana saya dapat membantu mewujudkan visi Anda dalam pengembangan front-end yang menarik dan fungsional. Hubungi saya sekarang!"
         />{" "}
+        <link rel="icon" href="/public/favicon.ico" sizes="any" />
       </Head>
       <section
         className={`  bg-[url('../../public/background.webp')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-top `}

@@ -5,6 +5,9 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: [],
+  },
   theme: {
     boxShadow: {
       lgWhite: "0px 4px 4px 0px rgba(255, 255, 255, 0.25);",

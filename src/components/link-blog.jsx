@@ -24,7 +24,7 @@ export default function LinkBlog() {
           target="_blank"
           className="text-[#22D3EE] font-bold text-4xl relative z-[99] inline-block "
         >
-          firdiaudi.xyz/blog
+          firdiaudi.site/blog
         </Link>
       </motion.div>
     </div>

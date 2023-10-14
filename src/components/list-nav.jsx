@@ -22,7 +22,7 @@ const ListNav = () => {
             {item.name}
             {activeSection === item.href && (
               <span className="absolute z-[-1] inset-0 mt-2 w-[80px]">
-                <Image src={strip} alt="strip" />
+                <Image src={strip} alt="strip" width="auto" />
               </span>
             )}
           </Link>

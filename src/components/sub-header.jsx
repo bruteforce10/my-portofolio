@@ -6,7 +6,7 @@ const SubHeader = () => {
   const words = text.split(" ");
 
   return (
-    <div className="md:text-lead text-[20px] max-w-[300px] md:max-w-[738px] mt-10 md:mt-[64px] relative ">
+    <div className="md:text-lead text-[20px] max-w-[300px] md:max-w-[738px] mt-10 md:mt-[64px] relative text-black/80 ">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

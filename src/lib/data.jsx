@@ -19,6 +19,7 @@ import wordpress from "../../public/skill-icon/wordpress.svg";
 import vercel from "../../public/skill-icon/vercel.svg";
 import xampp from "../../public/skill-icon/xampp.svg";
 import nodejs from "../../public/skill-icon/nodejs.svg";
+import hygraph from "../../public/skill-icon/hygraph.svg";
 
 import show1 from "../../public/projects/sipilku/1.webp";
 import show2 from "../../public/projects/sipilku/2.webp";
@@ -49,6 +50,7 @@ import lisence6 from "../../public/certi/jquery.webp";
 import lisence7 from "../../public/certi/react-js-bootcamp.webp";
 import lisence8 from "../../public/certi/Sertifikat Wordpress.webp";
 import lisence9 from "../../public/certi/ui-design-app.webp";
+import lisence10 from "../../public/certi/belajar membuat front-end react.webp";
 import otherProjects1 from "../../public/projects/othersProjects/1.webp";
 import otherProjects2 from "../../public/projects/othersProjects/2.webp";
 import otherProjects3 from "../../public/projects/othersProjects/3.webp";
@@ -56,6 +58,7 @@ import otherProjects4 from "../../public/projects/othersProjects/4.webp";
 import otherProjects5 from "../../public/projects/othersProjects/5.webp";
 import otherProjects6 from "../../public/projects/othersProjects/6.webp";
 import otherProjects7 from "../../public/projects/othersProjects/7.webp";
+import otherProjects8 from "../../public/projects/othersProjects/8.webp";
 
 export const otherProjects = [
   {
@@ -75,10 +78,18 @@ export const otherProjects = [
     skills: ["HTML", "JavaScript", "CSS"],
   },
   {
+    img: otherProjects8,
+    name: "Car Rental",
+    link: "https://car-rental-firdi.vercel.app",
+    github: "https://github.com/bruteforce10/car-rental",
+    desc: "Car Rental Landing Page Built with Next.js, Third-Party Authentication, and Hygraph Database Integration.",
+    skills: ["Next JS", "TailW", "Hygraph"],
+  },
+  {
     img: otherProjects3,
     name: "Web Crypto",
-    link: "https://web-crypto-beta.vercel.app/",
-    github: "https://github.com/bruteforce10/web-crypto",
+    link: "https://car-rental-firdi.vercel.app",
+    github: "https://github.com/bruteforce10/car-rental",
     desc: "This is the first landing page I created using React technology, an achievement I am very proud of.",
     skills: ["React", "Sass", "TailW"],
   },
@@ -134,6 +145,12 @@ export const LisenceResult = [
     name: "Bootcamp React JS with PKS Digital School",
     date: "June 2023",
     link: "https://member.pksdigitalschool.id/sertifikat/generate/552d5aff-c353-4e31-88e0-38a22e801245",
+  },
+  {
+    img: lisence10,
+    name: "Belajar Membuat Aplikasi Web dengan React",
+    date: "September 2023",
+    link: "https://dicoding.com/certificates/81P2748QOZOY",
   },
   {
     img: lisence2,
@@ -323,6 +340,10 @@ export const mySkills = [
   {
     name: "Vue JS",
     icon: vue,
+  },
+  {
+    name: "Hygraph",
+    icon: hygraph,
   },
   {
     name: "Node JS",

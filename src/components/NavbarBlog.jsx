@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { MyContext } from "@/lib/context/AppContext";
 import Image from "next/image";
-import profile from "../../public/profile.png";
+import profile from "../../public/profile.webp";
 import { motion } from "framer-motion";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
