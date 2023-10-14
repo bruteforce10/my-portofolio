@@ -73,7 +73,7 @@ function NavbarDark() {
                     "relative",
                     activeSection === item.href && "font-medium"
                   )}
-                  href={`http://localhost:3000/${item.href}`}
+                  href={`/${item.href}`}
                 >
                   {item.name}
                   {activeSection === item.href && (

@@ -35,7 +35,17 @@ export default function Home() {
         <meta
           name="description"
           content="Saya adalah seorang Front-End Developer bernama Firdi, dengan fokus pada menciptakan antarmuka pengguna yang menarik dan responsif. Temukan bagaimana saya dapat membantu mewujudkan visi Anda dalam pengembangan front-end yang menarik dan fungsional. Hubungi saya sekarang!"
-        />{" "}
+        />
+        <meta property="og:url" content="https://firdiaudi.site" />
+        <meta
+          property="og:title"
+          content="Firdi Audi Putra: Inspiring with Intuitive Front-End Dev Designs"
+        />
+        <meta property="og:image" content="/header-ogp.png" />
+        <meta
+          property="og:description"
+          content=" I am a freelance frontend developer based in Jakarta, Indonesia..."
+        />
       </Head>
       <section
         className={`  bg-[url('../../public/background.webp')] relative z-10 bg-cover -mt-4 bg-no-repeat bg-top `}
